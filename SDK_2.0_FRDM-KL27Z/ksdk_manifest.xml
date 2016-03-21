@@ -1,0 +1,2564 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ksdk:manifest xmlns:ksdk="http://freescale.com/ksdk/1.2/ksdk_manifest.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://freescale.com/ksdk/1.2/ksdk_manifest.xsd http://freescale.com/ksdk/1.2/ksdk_manifest.xsd" format_version="2.0">
+  <ksdk id="KSDK200" name="KSDK 2.0.0" version="2.0.0"/>
+  <api version="2.0.0"/>
+  <compilers>
+    <compiler name="iar"/>
+  </compilers>
+  <tools>
+    <tool id="iar" name="IAR Embedded Workbench for ARM" version="7.50" vendor="IAR Systems" vendor_url="http://www.iar.com"/>
+  </tools>
+  <boards>
+    <board id="FRDM_KL27Z" name="frdmkl27z" package="MKL27Z64VLH4" user_name="FRDM-KL27Z" version="1.0.0">
+      <examples>
+        <example name="polling_transfer" category="driver_examples/spi" description="" dependency="MKL27Z644_startup clock common debug_console gpio lpuart port smc spi uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/driver_examples/spi/polling_transfer" type="src">
+            <files mask="pin_mux.c"/>
+            <files mask="spi_polling_transfer.c"/>
+            <files mask="board.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/spi/polling_transfer" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/spi/polling_transfer/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="dma_transfer" category="driver_examples/spi" description="" dependency="MKL27Z644_startup clock common debug_console dma dmamux gpio lpuart port smc spi uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/driver_examples/spi/dma_transfer" type="src">
+            <files mask="spi_dma_transfer.c"/>
+            <files mask="pin_mux.c"/>
+            <files mask="board.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/spi/dma_transfer" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/spi/dma_transfer/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="interrupt" category="driver_examples/cmp" description="" dependency="MKL27Z644_startup clock cmp common debug_console gpio lpuart port smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/driver_examples/cmp/interrupt" type="src">
+            <files mask="pin_mux.c"/>
+            <files mask="cmp_interrupt.c"/>
+            <files mask="board.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/cmp/interrupt" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/cmp/interrupt/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="power_manager" category="demo_apps" description="" dependency="MKL27Z644_startup clock common debug_console gpio llwu lptmr lpuart notifier pmc port rcm smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/demo_apps/power_manager" type="src">
+            <files mask="power_manager.c"/>
+            <files mask="pin_mux.c"/>
+            <files mask="clock_mcglite.c"/>
+            <files mask="board.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/demo_apps/power_manager" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="power_manager.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/demo_apps/power_manager/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="bm" category="usb_examples/usb_device_audio_generator_lite" description="" dependency="MKL27Z644_startup clock common debug_console gpio lpuart port sim smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/usb_examples/usb_device_audio_generator_lite/bm" type="src">
+            <files mask="usb_device_audio.c"/>
+            <files mask="usb_device_ch9.c"/>
+            <files mask="pin_mux.c"/>
+            <files mask="board.c"/>
+            <files mask="clock_config.c"/>
+            <files mask="audio_generator.c"/>
+            <files mask="usb_device_descriptor.c"/>
+            <files mask="audio_data.c"/>
+          </source>
+          <source path="boards/frdmkl27z/usb_examples/usb_device_audio_generator_lite/bm" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="usb_device_audio.h"/>
+            <files mask="usb_device_descriptor.h"/>
+            <files mask="clock_config.h"/>
+            <files mask="usb_device_config.h"/>
+            <files mask="audio_generator.h"/>
+            <files mask="usb_device_ch9.h"/>
+          </source>
+          <source path="boards/frdmkl27z/usb_examples/usb_device_audio_generator_lite/bm/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="interrupt_transfer" category="driver_examples/spi" description="" dependency="MKL27Z644_startup clock common debug_console gpio lpuart port smc spi uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/driver_examples/spi/interrupt_transfer" type="src">
+            <files mask="pin_mux.c"/>
+            <files mask="board.c"/>
+            <files mask="clock_config.c"/>
+            <files mask="spi_interrupt_transfer.c"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/spi/interrupt_transfer" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/spi/interrupt_transfer/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="memory_to_memory" category="driver_examples/dma" description="" dependency="MKL27Z644_startup clock common debug_console dma dmamux gpio lpuart port sim smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/driver_examples/dma/memory_to_memory" type="src">
+            <files mask="dma_memory_to_memory.c"/>
+            <files mask="pin_mux.c"/>
+            <files mask="board.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/dma/memory_to_memory" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/dma/memory_to_memory/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="bm" category="usb_examples/usb_device_hid_mouse" description="" dependency="MKL27Z644_startup clock common debug_console gpio lpuart port sim smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/usb_examples/usb_device_hid_mouse/bm" type="src">
+            <files mask="usb_device_ch9.c"/>
+            <files mask="pin_mux.c"/>
+            <files mask="usb_device_class.c"/>
+            <files mask="board.c"/>
+            <files mask="mouse.c"/>
+            <files mask="usb_device_hid.c"/>
+            <files mask="clock_config.c"/>
+            <files mask="usb_device_descriptor.c"/>
+          </source>
+          <source path="boards/frdmkl27z/usb_examples/usb_device_hid_mouse/bm" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="usb_device_descriptor.h"/>
+            <files mask="clock_config.h"/>
+            <files mask="usb_device_config.h"/>
+            <files mask="mouse.h"/>
+            <files mask="usb_device_ch9.h"/>
+            <files mask="usb_device_class.h"/>
+            <files mask="usb_device_hid.h"/>
+          </source>
+          <source path="boards/frdmkl27z/usb_examples/usb_device_hid_mouse/bm/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="polling_transfer" category="driver_examples/flexio/uart" description="" dependency="MKL27Z644_startup clock common debug_console flexio gpio lpuart port sim smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/driver_examples/flexio/uart/polling_transfer" type="src">
+            <files mask="pin_mux.c"/>
+            <files mask="board.c"/>
+            <files mask="flexio_uart_polling_transfer.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/flexio/uart/polling_transfer" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/flexio/uart/polling_transfer/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="interrupt" category="driver_examples/i2c" description="" dependency="MKL27Z644_startup clock common debug_console gpio i2c lpuart port smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/driver_examples/i2c/interrupt" type="src">
+            <files mask="pin_mux.c"/>
+            <files mask="board.c"/>
+            <files mask="clock_config.c"/>
+            <files mask="i2c_interrupt.c"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/i2c/interrupt" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/i2c/interrupt/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="bm" category="usb_examples/usb_device_composite_hid_mouse_hid_keyboard" description="" dependency="MKL27Z644_startup clock common debug_console gpio lpuart port sim smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/usb_examples/usb_device_composite_hid_mouse_hid_keyboard/bm" type="src">
+            <files mask="composite.c"/>
+            <files mask="hid_keyboard.c"/>
+            <files mask="usb_device_ch9.c"/>
+            <files mask="pin_mux.c"/>
+            <files mask="hid_mouse.c"/>
+            <files mask="usb_device_class.c"/>
+            <files mask="board.c"/>
+            <files mask="usb_device_hid.c"/>
+            <files mask="clock_config.c"/>
+            <files mask="usb_device_descriptor.c"/>
+          </source>
+          <source path="boards/frdmkl27z/usb_examples/usb_device_composite_hid_mouse_hid_keyboard/bm" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="hid_mouse.h"/>
+            <files mask="usb_device_descriptor.h"/>
+            <files mask="clock_config.h"/>
+            <files mask="usb_device_config.h"/>
+            <files mask="hid_keyboard.h"/>
+            <files mask="composite.h"/>
+            <files mask="usb_device_ch9.h"/>
+            <files mask="usb_device_class.h"/>
+            <files mask="usb_device_hid.h"/>
+          </source>
+          <source path="boards/frdmkl27z/usb_examples/usb_device_composite_hid_mouse_hid_keyboard/bm/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="bm" category="usb_examples/usb_device_hid_mouse_lite" description="" dependency="MKL27Z644_startup clock common debug_console gpio lpuart port sim smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/usb_examples/usb_device_hid_mouse_lite/bm" type="src">
+            <files mask="usb_device_ch9.c"/>
+            <files mask="pin_mux.c"/>
+            <files mask="board.c"/>
+            <files mask="mouse.c"/>
+            <files mask="usb_device_hid.c"/>
+            <files mask="clock_config.c"/>
+            <files mask="usb_device_descriptor.c"/>
+          </source>
+          <source path="boards/frdmkl27z/usb_examples/usb_device_hid_mouse_lite/bm" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="usb_device_descriptor.h"/>
+            <files mask="clock_config.h"/>
+            <files mask="usb_device_config.h"/>
+            <files mask="mouse.h"/>
+            <files mask="usb_device_ch9.h"/>
+            <files mask="usb_device_hid.h"/>
+          </source>
+          <source path="boards/frdmkl27z/usb_examples/usb_device_hid_mouse_lite/bm/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="inf" category="usb_examples/usb_device_cdc_vcom" description=""/>
+        <example name="pit" category="driver_examples" description="" dependency="MKL27Z644_startup clock common debug_console gpio lpuart pit port smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/driver_examples/pit" type="src">
+            <files mask="pin_mux.c"/>
+            <files mask="pit.c"/>
+            <files mask="board.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/pit" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/pit/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="read_accel_value_transfer" category="driver_examples/i2c" description="" dependency="MKL27Z644_startup clock common debug_console gpio i2c lpuart port smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/driver_examples/i2c/read_accel_value_transfer" type="src">
+            <files mask="pin_mux.c"/>
+            <files mask="i2c_read_accel_value_transfer.c"/>
+            <files mask="board.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/i2c/read_accel_value_transfer" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/i2c/read_accel_value_transfer/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="bm" category="usb_examples/usb_device_hid_generic" description="" dependency="MKL27Z644_startup clock common debug_console gpio lpuart port sim smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/usb_examples/usb_device_hid_generic/bm" type="src">
+            <files mask="hid_generic.c"/>
+            <files mask="usb_device_ch9.c"/>
+            <files mask="pin_mux.c"/>
+            <files mask="usb_device_class.c"/>
+            <files mask="board.c"/>
+            <files mask="usb_device_hid.c"/>
+            <files mask="clock_config.c"/>
+            <files mask="usb_device_descriptor.c"/>
+          </source>
+          <source path="boards/frdmkl27z/usb_examples/usb_device_hid_generic/bm" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="usb_device_descriptor.h"/>
+            <files mask="hid_generic.h"/>
+            <files mask="clock_config.h"/>
+            <files mask="usb_device_config.h"/>
+            <files mask="usb_device_ch9.h"/>
+            <files mask="usb_device_class.h"/>
+            <files mask="usb_device_hid.h"/>
+          </source>
+          <source path="boards/frdmkl27z/usb_examples/usb_device_hid_generic/bm/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="interrupt_transfer" category="driver_examples/lpuart" description="" dependency="MKL27Z644_startup clock common debug_console gpio lpuart port sim smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/driver_examples/lpuart/interrupt_transfer" type="src">
+            <files mask="lpuart_interrupt_transfer.c"/>
+            <files mask="pin_mux.c"/>
+            <files mask="board.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/lpuart/interrupt_transfer" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/lpuart/interrupt_transfer/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="bm" category="usb_examples/usb_device_phdc_weighscale_lite" description="" dependency="MKL27Z644_startup clock common debug_console gpio lpuart port sim smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/usb_examples/usb_device_phdc_weighscale_lite/bm" type="src">
+            <files mask="ieee11073_agent.c"/>
+            <files mask="usb_device_ch9.c"/>
+            <files mask="usb_shim_agent.c"/>
+            <files mask="pin_mux.c"/>
+            <files mask="ieee11073_timer.c"/>
+            <files mask="usb_device_phdc.c"/>
+            <files mask="board.c"/>
+            <files mask="weighscale.c"/>
+            <files mask="clock_config.c"/>
+            <files mask="usb_device_descriptor.c"/>
+          </source>
+          <source path="boards/frdmkl27z/usb_examples/usb_device_phdc_weighscale_lite/bm" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="weighscale.h"/>
+            <files mask="usb_device_descriptor.h"/>
+            <files mask="usb_shim_agent.h"/>
+            <files mask="ieee11073_types.h"/>
+            <files mask="ieee11073_timer.h"/>
+            <files mask="clock_config.h"/>
+            <files mask="usb_device_config.h"/>
+            <files mask="usb_device_ch9.h"/>
+            <files mask="usb_device_phdc.h"/>
+            <files mask="ieee11073_agent.h"/>
+          </source>
+          <source path="boards/frdmkl27z/usb_examples/usb_device_phdc_weighscale_lite/bm/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="bm" category="usb_examples/usb_device_composite_hid_mouse_hid_keyboard_lite" description="" dependency="MKL27Z644_startup clock common debug_console gpio lpuart port sim smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/usb_examples/usb_device_composite_hid_mouse_hid_keyboard_lite/bm" type="src">
+            <files mask="composite.c"/>
+            <files mask="hid_keyboard.c"/>
+            <files mask="usb_device_ch9.c"/>
+            <files mask="pin_mux.c"/>
+            <files mask="hid_mouse.c"/>
+            <files mask="board.c"/>
+            <files mask="usb_device_hid.c"/>
+            <files mask="clock_config.c"/>
+            <files mask="usb_device_descriptor.c"/>
+          </source>
+          <source path="boards/frdmkl27z/usb_examples/usb_device_composite_hid_mouse_hid_keyboard_lite/bm" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="hid_mouse.h"/>
+            <files mask="usb_device_descriptor.h"/>
+            <files mask="clock_config.h"/>
+            <files mask="usb_device_config.h"/>
+            <files mask="hid_keyboard.h"/>
+            <files mask="composite.h"/>
+            <files mask="usb_device_ch9.h"/>
+            <files mask="usb_device_hid.h"/>
+          </source>
+          <source path="boards/frdmkl27z/usb_examples/usb_device_composite_hid_mouse_hid_keyboard_lite/bm/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="bm" category="usb_examples/usb_device_cdc_vcom_lite" description="" dependency="MKL27Z644_startup clock common debug_console gpio lpuart port sim smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/usb_examples/usb_device_cdc_vcom_lite/bm" type="src">
+            <files mask="virtual_com.c"/>
+            <files mask="usb_device_ch9.c"/>
+            <files mask="pin_mux.c"/>
+            <files mask="board.c"/>
+            <files mask="usb_device_cdc_acm.c"/>
+            <files mask="clock_config.c"/>
+            <files mask="usb_device_descriptor.c"/>
+          </source>
+          <source path="boards/frdmkl27z/usb_examples/usb_device_cdc_vcom_lite/bm" type="c_include">
+            <files mask="board.h"/>
+            <files mask="virtual_com.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="usb_device_cdc_acm.h"/>
+            <files mask="usb_device_descriptor.h"/>
+            <files mask="clock_config.h"/>
+            <files mask="usb_device_config.h"/>
+            <files mask="usb_device_ch9.h"/>
+          </source>
+          <source path="boards/frdmkl27z/usb_examples/usb_device_cdc_vcom_lite/bm/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="interrupt" category="driver_examples/lpuart" description="" dependency="MKL27Z644_startup clock common debug_console gpio lpuart port smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/driver_examples/lpuart/interrupt" type="src">
+            <files mask="pin_mux.c"/>
+            <files mask="board.c"/>
+            <files mask="lpuart_interrupt.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/lpuart/interrupt" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/lpuart/interrupt/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="polling" category="driver_examples/cmp" description="" dependency="MKL27Z644_startup clock cmp common debug_console gpio lpuart port smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/driver_examples/cmp/polling" type="src">
+            <files mask="pin_mux.c"/>
+            <files mask="cmp_polling.c"/>
+            <files mask="board.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/cmp/polling" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/cmp/polling/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="rtc_func" category="demo_apps" description="" dependency="MKL27Z644_startup clock common debug_console gpio lpuart port rtc smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/demo_apps/rtc_func" type="src">
+            <files mask="pin_mux.c"/>
+            <files mask="board.c"/>
+            <files mask="rtc_func.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/demo_apps/rtc_func" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/demo_apps/rtc_func/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="polling_transfer" category="driver_examples/lpuart" description="" dependency="MKL27Z644_startup clock common debug_console gpio lpuart port sim smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/driver_examples/lpuart/polling_transfer" type="src">
+            <files mask="lpuart_polling_transfer.c"/>
+            <files mask="pin_mux.c"/>
+            <files mask="board.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/lpuart/polling_transfer" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/lpuart/polling_transfer/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="bm" category="usb_examples/usb_device_composite_hid_audio_lite" description="" dependency="MKL27Z644_startup clock common debug_console gpio lpuart port sim smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/usb_examples/usb_device_composite_hid_audio_lite/bm" type="src">
+            <files mask="usb_device_audio.c"/>
+            <files mask="composite.c"/>
+            <files mask="usb_device_ch9.c"/>
+            <files mask="pin_mux.c"/>
+            <files mask="board.c"/>
+            <files mask="mouse.c"/>
+            <files mask="usb_device_hid.c"/>
+            <files mask="clock_config.c"/>
+            <files mask="audio_generator.c"/>
+            <files mask="usb_device_descriptor.c"/>
+            <files mask="audio_data.c"/>
+          </source>
+          <source path="boards/frdmkl27z/usb_examples/usb_device_composite_hid_audio_lite/bm" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="usb_device_audio.h"/>
+            <files mask="usb_device_descriptor.h"/>
+            <files mask="clock_config.h"/>
+            <files mask="usb_device_config.h"/>
+            <files mask="composite.h"/>
+            <files mask="audio_generator.h"/>
+            <files mask="mouse.h"/>
+            <files mask="usb_device_ch9.h"/>
+            <files mask="usb_device_hid.h"/>
+          </source>
+          <source path="boards/frdmkl27z/usb_examples/usb_device_composite_hid_audio_lite/bm/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="bm" category="usb_examples/usb_device_composite_hid_audio" description="" dependency="MKL27Z644_startup clock common debug_console gpio lpuart port sim smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/usb_examples/usb_device_composite_hid_audio/bm" type="src">
+            <files mask="usb_device_audio.c"/>
+            <files mask="composite.c"/>
+            <files mask="usb_device_ch9.c"/>
+            <files mask="pin_mux.c"/>
+            <files mask="usb_device_class.c"/>
+            <files mask="board.c"/>
+            <files mask="mouse.c"/>
+            <files mask="usb_device_hid.c"/>
+            <files mask="clock_config.c"/>
+            <files mask="audio_generator.c"/>
+            <files mask="usb_device_descriptor.c"/>
+            <files mask="audio_data.c"/>
+          </source>
+          <source path="boards/frdmkl27z/usb_examples/usb_device_composite_hid_audio/bm" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="usb_device_audio.h"/>
+            <files mask="usb_device_descriptor.h"/>
+            <files mask="clock_config.h"/>
+            <files mask="usb_device_config.h"/>
+            <files mask="composite.h"/>
+            <files mask="audio_generator.h"/>
+            <files mask="mouse.h"/>
+            <files mask="usb_device_ch9.h"/>
+            <files mask="usb_device_class.h"/>
+            <files mask="usb_device_hid.h"/>
+          </source>
+          <source path="boards/frdmkl27z/usb_examples/usb_device_composite_hid_audio/bm/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="slave" category="driver_examples/flexio/spi/int_spi_transfer" description="" dependency="MKL27Z644_startup clock common debug_console flexio gpio lpuart port sim smc spi uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/driver_examples/flexio/spi/int_spi_transfer/slave" type="src">
+            <files mask="pin_mux.c"/>
+            <files mask="board.c"/>
+            <files mask="flexio_spi_int_spi_transfer_slave.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/flexio/spi/int_spi_transfer/slave" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/flexio/spi/int_spi_transfer/slave/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="interrupt" category="driver_examples/adc16" description="" dependency="MKL27Z644_startup adc16 clock common debug_console gpio lpuart port smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/driver_examples/adc16/interrupt" type="src">
+            <files mask="adc16_interrupt.c"/>
+            <files mask="pin_mux.c"/>
+            <files mask="board.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/adc16/interrupt" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/adc16/interrupt/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="pwm_twochannel" category="driver_examples/tpm" description="" dependency="MKL27Z644_startup clock common debug_console gpio lpuart port smc tpm uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/driver_examples/tpm/pwm_twochannel" type="src">
+            <files mask="tpm_pwm_twochannel.c"/>
+            <files mask="pin_mux.c"/>
+            <files mask="board.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/tpm/pwm_twochannel" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/tpm/pwm_twochannel/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="cop" category="driver_examples" description="" dependency="MKL27Z644_startup clock common cop debug_console gpio lpuart port rcm smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/driver_examples/cop" type="src">
+            <files mask="cop.c"/>
+            <files mask="pin_mux.c"/>
+            <files mask="board.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/cop" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/cop/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="interrupt_i2c_transfer" category="driver_examples/flexio/i2c" description="" dependency="MKL27Z644_startup clock common debug_console flexio gpio i2c lpuart port smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/driver_examples/flexio/i2c/interrupt_i2c_transfer" type="src">
+            <files mask="flexio_i2c_interrupt_i2c_transfer.c"/>
+            <files mask="pin_mux.c"/>
+            <files mask="board.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/flexio/i2c/interrupt_i2c_transfer" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/flexio/i2c/interrupt_i2c_transfer/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="bm" category="usb_examples/usb_device_hid_generic_lite" description="" dependency="MKL27Z644_startup clock common debug_console gpio lpuart port sim smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/usb_examples/usb_device_hid_generic_lite/bm" type="src">
+            <files mask="hid_generic.c"/>
+            <files mask="usb_device_ch9.c"/>
+            <files mask="pin_mux.c"/>
+            <files mask="board.c"/>
+            <files mask="usb_device_hid.c"/>
+            <files mask="clock_config.c"/>
+            <files mask="usb_device_descriptor.c"/>
+          </source>
+          <source path="boards/frdmkl27z/usb_examples/usb_device_hid_generic_lite/bm" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="usb_device_descriptor.h"/>
+            <files mask="hid_generic.h"/>
+            <files mask="clock_config.h"/>
+            <files mask="usb_device_config.h"/>
+            <files mask="usb_device_ch9.h"/>
+            <files mask="usb_device_hid.h"/>
+          </source>
+          <source path="boards/frdmkl27z/usb_examples/usb_device_hid_generic_lite/bm/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="lptmr" category="driver_examples" description="" dependency="MKL27Z644_startup clock common debug_console gpio lptmr lpuart port smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/driver_examples/lptmr" type="src">
+            <files mask="lptmr.c"/>
+            <files mask="pin_mux.c"/>
+            <files mask="board.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/lptmr" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/lptmr/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="dma_transfer" category="driver_examples/lpuart" description="" dependency="MKL27Z644_startup clock common debug_console dma dma_manager dmamux gpio lpuart port smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/driver_examples/lpuart/dma_transfer" type="src">
+            <files mask="pin_mux.c"/>
+            <files mask="board.c"/>
+            <files mask="lpuart_dma_transfer.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/lpuart/dma_transfer" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/lpuart/dma_transfer/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="polling_transfer" category="driver_examples/uart" description="" dependency="MKL27Z644_startup clock common debug_console gpio lpuart port smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/driver_examples/uart/polling_transfer" type="src">
+            <files mask="uart_polling_transfer.c"/>
+            <files mask="pin_mux.c"/>
+            <files mask="board.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/uart/polling_transfer" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/uart/polling_transfer/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="inf" category="usb_examples/usb_device_cdc_vcom_lite" description=""/>
+        <example name="dma_transfer" category="driver_examples/flexio/uart" description="" dependency="MKL27Z644_startup clock common debug_console dma dma_manager dmamux flexio gpio lpuart port sim smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/driver_examples/flexio/uart/dma_transfer" type="src">
+            <files mask="flexio_uart_dma_transfer.c"/>
+            <files mask="pin_mux.c"/>
+            <files mask="board.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/flexio/uart/dma_transfer" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/flexio/uart/dma_transfer/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="slave" category="driver_examples/flexio/spi/dma_spi_transfer" description="" dependency="MKL27Z644_startup clock common debug_console dma dma_manager dmamux flexio gpio lpuart port sim smc spi uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/driver_examples/flexio/spi/dma_spi_transfer/slave" type="src">
+            <files mask="flexio_spi_dma_spi_transfer_slave.c"/>
+            <files mask="pin_mux.c"/>
+            <files mask="board.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/flexio/spi/dma_spi_transfer/slave" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/flexio/spi/dma_spi_transfer/slave/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="interrupt_transfer" category="driver_examples/uart" description="" dependency="MKL27Z644_startup clock common debug_console gpio lpuart port smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/driver_examples/uart/interrupt_transfer" type="src">
+            <files mask="pin_mux.c"/>
+            <files mask="uart_interrupt_transfer.c"/>
+            <files mask="board.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/uart/interrupt_transfer" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/uart/interrupt_transfer/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="dma_transfer" category="driver_examples/uart" description="" dependency="MKL27Z644_startup clock common debug_console dma dma_manager dmamux gpio lpuart port smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/driver_examples/uart/dma_transfer" type="src">
+            <files mask="pin_mux.c"/>
+            <files mask="board.c"/>
+            <files mask="clock_config.c"/>
+            <files mask="uart_dma_transfer.c"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/uart/dma_transfer" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/uart/dma_transfer/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="master" category="driver_examples/flexio/spi/dma_spi_transfer" description="" dependency="MKL27Z644_startup clock common debug_console dma dma_manager dmamux flexio gpio lpuart port sim smc spi uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/driver_examples/flexio/spi/dma_spi_transfer/master" type="src">
+            <files mask="pin_mux.c"/>
+            <files mask="flexio_spi_dma_spi_transfer_master.c"/>
+            <files mask="board.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/flexio/spi/dma_spi_transfer/master" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/flexio/spi/dma_spi_transfer/master/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="interrupt_transfer" category="driver_examples/flexio/uart" description="" dependency="MKL27Z644_startup clock common debug_console flexio gpio lpuart port sim smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/driver_examples/flexio/uart/interrupt_transfer" type="src">
+            <files mask="flexio_uart_interrupt_transfer.c"/>
+            <files mask="pin_mux.c"/>
+            <files mask="board.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/flexio/uart/interrupt_transfer" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/flexio/uart/interrupt_transfer/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="read_accel_value_transfer" category="driver_examples/flexio/i2c" description="" dependency="MKL27Z644_startup clock common debug_console flexio gpio lpuart port smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/driver_examples/flexio/i2c/read_accel_value_transfer" type="src">
+            <files mask="pin_mux.c"/>
+            <files mask="flexio_i2c_read_accel_value_transfer.c"/>
+            <files mask="board.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/flexio/i2c/read_accel_value_transfer" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/flexio/i2c/read_accel_value_transfer/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="interrupt" category="driver_examples/uart" description="" dependency="MKL27Z644_startup clock common debug_console gpio lpuart port smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/driver_examples/uart/interrupt" type="src">
+            <files mask="pin_mux.c"/>
+            <files mask="uart_interrupt.c"/>
+            <files mask="board.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/uart/interrupt" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/uart/interrupt/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="polling" category="driver_examples/adc16" description="" dependency="MKL27Z644_startup adc16 clock common debug_console gpio lpuart port smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/driver_examples/adc16/polling" type="src">
+            <files mask="pin_mux.c"/>
+            <files mask="board.c"/>
+            <files mask="adc16_polling.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/adc16/polling" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/adc16/polling/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="interrupt" category="driver_examples/spi" description="" dependency="MKL27Z644_startup clock common debug_console gpio lpuart port smc spi uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/driver_examples/spi/interrupt" type="src">
+            <files mask="spi_interrupt.c"/>
+            <files mask="pin_mux.c"/>
+            <files mask="board.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/spi/interrupt" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/spi/interrupt/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="dma_transfer" category="driver_examples/i2c" description="" dependency="MKL27Z644_startup clock common debug_console dma dma_manager dmamux gpio i2c lpuart port smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/driver_examples/i2c/dma_transfer" type="src">
+            <files mask="pin_mux.c"/>
+            <files mask="i2c_dma_transfer.c"/>
+            <files mask="board.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/i2c/dma_transfer" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/i2c/dma_transfer/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="rtc" category="driver_examples" description="" dependency="MKL27Z644_startup clock common debug_console gpio lpuart port rtc smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/driver_examples/rtc" type="src">
+            <files mask="rtc.c"/>
+            <files mask="pin_mux.c"/>
+            <files mask="board.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/rtc" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/rtc/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="bm" category="usb_examples/usb_device_audio_generator" description="" dependency="MKL27Z644_startup clock common debug_console gpio lpuart port sim smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/usb_examples/usb_device_audio_generator/bm" type="src">
+            <files mask="usb_device_audio.c"/>
+            <files mask="usb_device_ch9.c"/>
+            <files mask="pin_mux.c"/>
+            <files mask="usb_device_class.c"/>
+            <files mask="board.c"/>
+            <files mask="clock_config.c"/>
+            <files mask="audio_generator.c"/>
+            <files mask="usb_device_descriptor.c"/>
+            <files mask="audio_data.c"/>
+          </source>
+          <source path="boards/frdmkl27z/usb_examples/usb_device_audio_generator/bm" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="usb_device_audio.h"/>
+            <files mask="usb_device_descriptor.h"/>
+            <files mask="clock_config.h"/>
+            <files mask="usb_device_config.h"/>
+            <files mask="audio_generator.h"/>
+            <files mask="usb_device_ch9.h"/>
+            <files mask="usb_device_class.h"/>
+          </source>
+          <source path="boards/frdmkl27z/usb_examples/usb_device_audio_generator/bm/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="power_mode_switch" category="demo_apps" description="" dependency="MKL27Z644_startup clock common debug_console gpio llwu lptmr lpuart pmc port rcm smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/demo_apps/power_mode_switch" type="src">
+            <files mask="power_mode_switch.c"/>
+            <files mask="pin_mux.c"/>
+            <files mask="clock_mcglite.c"/>
+            <files mask="board.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/demo_apps/power_mode_switch" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="power_mode_switch.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/demo_apps/power_mode_switch/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="input_interrupt" category="driver_examples/gpio" description="" dependency="MKL27Z644_startup clock common debug_console gpio lpuart port smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/driver_examples/gpio/input_interrupt" type="src">
+            <files mask="pin_mux.c"/>
+            <files mask="board.c"/>
+            <files mask="gpio_input_interrupt.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/gpio/input_interrupt" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/gpio/input_interrupt/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="bm" category="usb_examples/usb_device_cdc_vcom" description="" dependency="MKL27Z644_startup clock common debug_console gpio lpuart port sim smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/usb_examples/usb_device_cdc_vcom/bm" type="src">
+            <files mask="virtual_com.c"/>
+            <files mask="usb_device_ch9.c"/>
+            <files mask="pin_mux.c"/>
+            <files mask="usb_device_class.c"/>
+            <files mask="board.c"/>
+            <files mask="usb_device_cdc_acm.c"/>
+            <files mask="clock_config.c"/>
+            <files mask="usb_device_descriptor.c"/>
+          </source>
+          <source path="boards/frdmkl27z/usb_examples/usb_device_cdc_vcom/bm" type="c_include">
+            <files mask="board.h"/>
+            <files mask="virtual_com.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="usb_device_cdc_acm.h"/>
+            <files mask="usb_device_descriptor.h"/>
+            <files mask="clock_config.h"/>
+            <files mask="usb_device_config.h"/>
+            <files mask="usb_device_ch9.h"/>
+            <files mask="usb_device_class.h"/>
+          </source>
+          <source path="boards/frdmkl27z/usb_examples/usb_device_cdc_vcom/bm/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="led_output" category="driver_examples/gpio" description="" dependency="MKL27Z644_startup clock common debug_console gpio lpuart port smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/driver_examples/gpio/led_output" type="src">
+            <files mask="pin_mux.c"/>
+            <files mask="board.c"/>
+            <files mask="gpio_led_output.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/gpio/led_output" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/gpio/led_output/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="hello_world" category="demo_apps" description="" dependency="MKL27Z644_startup clock common debug_console gpio lpuart port smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/demo_apps/hello_world" type="src">
+            <files mask="pin_mux.c"/>
+            <files mask="board.c"/>
+            <files mask="clock_config.c"/>
+            <files mask="hello_world.c"/>
+          </source>
+          <source path="boards/frdmkl27z/demo_apps/hello_world" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/demo_apps/hello_world/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="adc_low_power" category="demo_apps" description="" dependency="MKL27Z644_startup adc16 clock common debug_console gpio lptmr lpuart pmc port sim smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/demo_apps/adc_low_power" type="src">
+            <files mask="pin_mux.c"/>
+            <files mask="board.c"/>
+            <files mask="adc_low_power.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/demo_apps/adc_low_power" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/demo_apps/adc_low_power/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="flash_erase_program_verify" category="driver_examples/flash" description="" dependency="MKL27Z644_startup clock common debug_console flash gpio lpuart port smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/driver_examples/flash/flash_erase_program_verify" type="src">
+            <files mask="pin_mux.c"/>
+            <files mask="board.c"/>
+            <files mask="flash_erase_program_verify.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/flash/flash_erase_program_verify" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/flash/flash_erase_program_verify/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="polling_transfer" category="driver_examples/i2c" description="" dependency="MKL27Z644_startup clock common debug_console gpio i2c lpuart port smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/driver_examples/i2c/polling_transfer" type="src">
+            <files mask="i2c_polling_transfer.c"/>
+            <files mask="pin_mux.c"/>
+            <files mask="board.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/i2c/polling_transfer" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/i2c/polling_transfer/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="interrupt_ring_buffer_transfer" category="driver_examples/uart" description="" dependency="MKL27Z644_startup clock common debug_console gpio lpuart port smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/driver_examples/uart/interrupt_ring_buffer_transfer" type="src">
+            <files mask="pin_mux.c"/>
+            <files mask="uart_interrupt_ring_buffer_transfer.c"/>
+            <files mask="board.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/uart/interrupt_ring_buffer_transfer" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/uart/interrupt_ring_buffer_transfer/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="master" category="driver_examples/flexio/spi/int_spi_transfer" description="" dependency="MKL27Z644_startup clock common debug_console flexio gpio lpuart port sim smc spi uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/driver_examples/flexio/spi/int_spi_transfer/master" type="src">
+            <files mask="pin_mux.c"/>
+            <files mask="board.c"/>
+            <files mask="flexio_spi_int_spi_transfer_master.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/flexio/spi/int_spi_transfer/master" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/flexio/spi/int_spi_transfer/master/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="crc" category="driver_examples" description="" dependency="MKL27Z644_startup clock common crc debug_console gpio lpuart port smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/driver_examples/crc" type="src">
+            <files mask="pin_mux.c"/>
+            <files mask="board.c"/>
+            <files mask="crc.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/crc" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/crc/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="mcglite" category="driver_examples" description="" dependency="MKL27Z644_startup clock common debug_console gpio lpuart port smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/driver_examples/mcglite" type="src">
+            <files mask="pin_mux.c"/>
+            <files mask="board.c"/>
+            <files mask="clock_config.c"/>
+            <files mask="mcglite.c"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/mcglite" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/mcglite/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="bm" category="usb_examples/usb_device_phdc_weighscale" description="" dependency="MKL27Z644_startup clock common debug_console gpio lpuart port sim smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/usb_examples/usb_device_phdc_weighscale/bm" type="src">
+            <files mask="ieee11073_agent.c"/>
+            <files mask="usb_device_ch9.c"/>
+            <files mask="usb_shim_agent.c"/>
+            <files mask="pin_mux.c"/>
+            <files mask="ieee11073_timer.c"/>
+            <files mask="usb_device_phdc.c"/>
+            <files mask="usb_device_class.c"/>
+            <files mask="board.c"/>
+            <files mask="weighscale.c"/>
+            <files mask="clock_config.c"/>
+            <files mask="usb_device_descriptor.c"/>
+          </source>
+          <source path="boards/frdmkl27z/usb_examples/usb_device_phdc_weighscale/bm" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="weighscale.h"/>
+            <files mask="usb_device_descriptor.h"/>
+            <files mask="usb_shim_agent.h"/>
+            <files mask="ieee11073_types.h"/>
+            <files mask="ieee11073_timer.h"/>
+            <files mask="clock_config.h"/>
+            <files mask="usb_device_config.h"/>
+            <files mask="usb_device_ch9.h"/>
+            <files mask="usb_device_class.h"/>
+            <files mask="usb_device_phdc.h"/>
+            <files mask="ieee11073_agent.h"/>
+          </source>
+          <source path="boards/frdmkl27z/usb_examples/usb_device_phdc_weighscale/bm/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="interrupt_transfer" category="driver_examples/i2c" description="" dependency="MKL27Z644_startup clock common debug_console gpio i2c lpuart port smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/driver_examples/i2c/interrupt_transfer" type="src">
+            <files mask="pin_mux.c"/>
+            <files mask="board.c"/>
+            <files mask="i2c_interrupt_transfer.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/i2c/interrupt_transfer" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/i2c/interrupt_transfer/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="interrupt_ring_buffer_transfer" category="driver_examples/lpuart" description="" dependency="MKL27Z644_startup clock common debug_console gpio lpuart port sim smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/driver_examples/lpuart/interrupt_ring_buffer_transfer" type="src">
+            <files mask="lpuart_interrupt_ring_buffer_transfer.c"/>
+            <files mask="pin_mux.c"/>
+            <files mask="board.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/lpuart/interrupt_ring_buffer_transfer" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/lpuart/interrupt_ring_buffer_transfer/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="bubble" category="demo_apps" description="" dependency="MKL27Z644_startup clock common debug_console gpio i2c lpuart port smc tpm uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/demo_apps/bubble" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+            <files mask="fsl_mma.h"/>
+          </source>
+          <source path="boards/frdmkl27z/demo_apps/bubble" type="src">
+            <files mask="pin_mux.c"/>
+            <files mask="board.c"/>
+            <files mask="bubble.c"/>
+            <files mask="fsl_mma.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/demo_apps/bubble/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+        <example name="int_ring_buffer_transfer" category="driver_examples/flexio/uart" description="" dependency="MKL27Z644_startup clock common debug_console flexio gpio lpuart port sim smc uart" device="MKL27Z644">
+          <source path="boards/frdmkl27z/driver_examples/flexio/uart/int_ring_buffer_transfer" type="src">
+            <files mask="flexio_uart_int_ring_buffer_transfer.c"/>
+            <files mask="pin_mux.c"/>
+            <files mask="board.c"/>
+            <files mask="clock_config.c"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/flexio/uart/int_ring_buffer_transfer" type="c_include">
+            <files mask="board.h"/>
+            <files mask="pin_mux.h"/>
+            <files mask="clock_config.h"/>
+          </source>
+          <source path="boards/frdmkl27z/driver_examples/flexio/uart/int_ring_buffer_transfer/iar" type="linker" tool="iar">
+            <files mask="MKL27Z64xxx4_flash.icf"/>
+          </source>
+        </example>
+      </examples>
+    </board>
+  </boards>
+  <devices>
+    <device full_name="MKL27Z64xxx4" name="MKL27Z644" version="1.0.0">
+      <core fpu="false" name="cm0plus"/>
+      <memory flash_size_kb="64" ram_size_kb="16"/>
+      <package name="MKL27Z64VDA4"/>
+      <package name="MKL27Z64VFT4"/>
+      <package name="MKL27Z64VMP4"/>
+      <package name="MKL27Z64VFM4"/>
+      <package name="MKL27Z64VLH4"/>
+      <evaluation_boards>
+        <evaluation_board name="FRDM-KL27Z"/>
+      </evaluation_boards>
+    </device>
+  </devices>
+  <components>
+    <component name="adc16" type="driver" device="MKL27Z644" version="2.0.0">
+      <source path="devices/MKL27Z644/drivers" type="src">
+        <files mask="fsl_adc16.c"/>
+      </source>
+      <source path="devices/MKL27Z644/drivers" type="c_include">
+        <files mask="fsl_adc16.h"/>
+      </source>
+    </component>
+    <component name="clock" type="driver" device="MKL27Z644" version="2.1.0">
+      <source path="devices/MKL27Z644/drivers" type="src">
+        <files mask="fsl_clock.c"/>
+      </source>
+      <source path="devices/MKL27Z644/drivers" type="c_include">
+        <files mask="fsl_clock.h"/>
+      </source>
+    </component>
+    <component name="cmp" type="driver" device="MKL27Z644" version="2.0.0">
+      <source path="devices/MKL27Z644/drivers" type="src">
+        <files mask="fsl_cmp.c"/>
+      </source>
+      <source path="devices/MKL27Z644/drivers" type="c_include">
+        <files mask="fsl_cmp.h"/>
+      </source>
+    </component>
+    <component name="common" type="driver" device="MKL27Z644" version="2.0.0">
+      <source path="devices/MKL27Z644/drivers" type="src">
+        <files mask="fsl_common.c"/>
+      </source>
+      <source path="devices/MKL27Z644/drivers" type="c_include">
+        <files mask="fsl_common.h"/>
+      </source>
+    </component>
+    <component name="cop" type="driver" device="MKL27Z644" version="2.0.0">
+      <source path="devices/MKL27Z644/drivers" type="src">
+        <files mask="fsl_cop.c"/>
+      </source>
+      <source path="devices/MKL27Z644/drivers" type="c_include">
+        <files mask="fsl_cop.h"/>
+      </source>
+    </component>
+    <component name="crc" type="driver" device="MKL27Z644" version="2.0.0">
+      <source path="devices/MKL27Z644/drivers" type="src">
+        <files mask="fsl_crc.c"/>
+      </source>
+      <source path="devices/MKL27Z644/drivers" type="c_include">
+        <files mask="fsl_crc.h"/>
+      </source>
+    </component>
+    <component name="dma" type="driver" device="MKL27Z644" version="2.0.0">
+      <source path="devices/MKL27Z644/drivers" type="src">
+        <files mask="fsl_dma.c"/>
+      </source>
+      <source path="devices/MKL27Z644/drivers" type="c_include">
+        <files mask="fsl_dma.h"/>
+      </source>
+    </component>
+    <component name="dmamux" type="driver" device="MKL27Z644" version="2.0.0">
+      <source path="devices/MKL27Z644/drivers" type="src">
+        <files mask="fsl_dmamux.c"/>
+      </source>
+      <source path="devices/MKL27Z644/drivers" type="c_include">
+        <files mask="fsl_dmamux.h"/>
+      </source>
+    </component>
+    <component name="flash" type="driver" device="MKL27Z644" version="2.1.0">
+      <source path="devices/MKL27Z644/drivers" type="src">
+        <files mask="fsl_flash.c"/>
+      </source>
+      <source path="devices/MKL27Z644/drivers" type="c_include">
+        <files mask="fsl_flash.h"/>
+      </source>
+    </component>
+    <component name="flexio" type="driver" device="MKL27Z644" version="2.1.0">
+      <source path="devices/MKL27Z644/drivers" type="src">
+        <files mask="fsl_flexio.c"/>
+        <files mask="fsl_flexio_i2c_master.c"/>
+        <files mask="fsl_flexio_i2s.c"/>
+        <files mask="fsl_flexio_i2s_dma.c"/>
+        <files mask="fsl_flexio_spi.c"/>
+        <files mask="fsl_flexio_spi_dma.c"/>
+        <files mask="fsl_flexio_uart.c"/>
+        <files mask="fsl_flexio_uart_dma.c"/>
+      </source>
+      <source path="devices/MKL27Z644/drivers" type="c_include">
+        <files mask="fsl_flexio.h"/>
+        <files mask="fsl_flexio_i2c_master.h"/>
+        <files mask="fsl_flexio_i2s.h"/>
+        <files mask="fsl_flexio_i2s_dma.h"/>
+        <files mask="fsl_flexio_spi.h"/>
+        <files mask="fsl_flexio_spi_dma.h"/>
+        <files mask="fsl_flexio_uart.h"/>
+        <files mask="fsl_flexio_uart_dma.h"/>
+      </source>
+    </component>
+    <component name="gpio" type="driver" device="MKL27Z644" version="2.1.0">
+      <source path="devices/MKL27Z644/drivers" type="src">
+        <files mask="fsl_gpio.c"/>
+      </source>
+      <source path="devices/MKL27Z644/drivers" type="c_include">
+        <files mask="fsl_gpio.h"/>
+      </source>
+    </component>
+    <component name="i2c" type="driver" device="MKL27Z644" version="2.0.0">
+      <source path="devices/MKL27Z644/drivers" type="src">
+        <files mask="fsl_i2c.c"/>
+        <files mask="fsl_i2c_dma.c"/>
+      </source>
+      <source path="devices/MKL27Z644/drivers" type="c_include">
+        <files mask="fsl_i2c.h"/>
+        <files mask="fsl_i2c_dma.h"/>
+      </source>
+    </component>
+    <component name="llwu" type="driver" device="MKL27Z644" version="2.0.1">
+      <source path="devices/MKL27Z644/drivers" type="src">
+        <files mask="fsl_llwu.c"/>
+      </source>
+      <source path="devices/MKL27Z644/drivers" type="c_include">
+        <files mask="fsl_llwu.h"/>
+      </source>
+    </component>
+    <component name="lptmr" type="driver" device="MKL27Z644" version="2.0.0">
+      <source path="devices/MKL27Z644/drivers" type="src">
+        <files mask="fsl_lptmr.c"/>
+      </source>
+      <source path="devices/MKL27Z644/drivers" type="c_include">
+        <files mask="fsl_lptmr.h"/>
+      </source>
+    </component>
+    <component name="lpuart" type="driver" device="MKL27Z644" version="2.1.0">
+      <source path="devices/MKL27Z644/drivers" type="src">
+        <files mask="fsl_lpuart.c"/>
+        <files mask="fsl_lpuart_dma.c"/>
+      </source>
+      <source path="devices/MKL27Z644/drivers" type="c_include">
+        <files mask="fsl_lpuart.h"/>
+        <files mask="fsl_lpuart_dma.h"/>
+      </source>
+    </component>
+    <component name="pit" type="driver" device="MKL27Z644" version="2.0.0">
+      <source path="devices/MKL27Z644/drivers" type="src">
+        <files mask="fsl_pit.c"/>
+      </source>
+      <source path="devices/MKL27Z644/drivers" type="c_include">
+        <files mask="fsl_pit.h"/>
+      </source>
+    </component>
+    <component name="pmc" type="driver" device="MKL27Z644" version="2.0.0">
+      <source path="devices/MKL27Z644/drivers" type="src">
+        <files mask="fsl_pmc.c"/>
+      </source>
+      <source path="devices/MKL27Z644/drivers" type="c_include">
+        <files mask="fsl_pmc.h"/>
+      </source>
+    </component>
+    <component name="port" type="driver" device="MKL27Z644" version="2.0.1">
+      <source path="devices/MKL27Z644/drivers" type="c_include">
+        <files mask="fsl_port.h"/>
+      </source>
+    </component>
+    <component name="rcm" type="driver" device="MKL27Z644" version="2.0.0">
+      <source path="devices/MKL27Z644/drivers" type="src">
+        <files mask="fsl_rcm.c"/>
+      </source>
+      <source path="devices/MKL27Z644/drivers" type="c_include">
+        <files mask="fsl_rcm.h"/>
+      </source>
+    </component>
+    <component name="rtc" type="driver" device="MKL27Z644" version="2.0.0">
+      <source path="devices/MKL27Z644/drivers" type="src">
+        <files mask="fsl_rtc.c"/>
+      </source>
+      <source path="devices/MKL27Z644/drivers" type="c_include">
+        <files mask="fsl_rtc.h"/>
+      </source>
+    </component>
+    <component name="sim" type="driver" device="MKL27Z644" version="2.0.0">
+      <source path="devices/MKL27Z644/drivers" type="src">
+        <files mask="fsl_sim.c"/>
+      </source>
+      <source path="devices/MKL27Z644/drivers" type="c_include">
+        <files mask="fsl_sim.h"/>
+      </source>
+    </component>
+    <component name="smc" type="driver" device="MKL27Z644" version="2.0.1">
+      <source path="devices/MKL27Z644/drivers" type="src">
+        <files mask="fsl_smc.c"/>
+      </source>
+      <source path="devices/MKL27Z644/drivers" type="c_include">
+        <files mask="fsl_smc.h"/>
+      </source>
+    </component>
+    <component name="spi" type="driver" device="MKL27Z644" version="2.0.0">
+      <source path="devices/MKL27Z644/drivers" type="src">
+        <files mask="fsl_spi.c"/>
+        <files mask="fsl_spi_dma.c"/>
+      </source>
+      <source path="devices/MKL27Z644/drivers" type="c_include">
+        <files mask="fsl_spi.h"/>
+        <files mask="fsl_spi_dma.h"/>
+      </source>
+    </component>
+    <component name="tpm" type="driver" device="MKL27Z644" version="2.0.1">
+      <source path="devices/MKL27Z644/drivers" type="src">
+        <files mask="fsl_tpm.c"/>
+      </source>
+      <source path="devices/MKL27Z644/drivers" type="c_include">
+        <files mask="fsl_tpm.h"/>
+      </source>
+    </component>
+    <component name="uart" type="driver" device="MKL27Z644" version="2.1.0">
+      <source path="devices/MKL27Z644/drivers" type="src">
+        <files mask="fsl_uart.c"/>
+        <files mask="fsl_uart_dma.c"/>
+      </source>
+      <source path="devices/MKL27Z644/drivers" type="c_include">
+        <files mask="fsl_uart.h"/>
+        <files mask="fsl_uart_dma.h"/>
+      </source>
+    </component>
+    <component name="vref" type="driver" device="MKL27Z644" version="2.0.0">
+      <source path="devices/MKL27Z644/drivers" type="src">
+        <files mask="fsl_vref.c"/>
+      </source>
+      <source path="devices/MKL27Z644/drivers" type="c_include">
+        <files mask="fsl_vref.h"/>
+      </source>
+    </component>
+    <component name="debug_console" type="utilities" device="MKL27Z644" version="1.0.0">
+      <source path="devices/MKL27Z644/utilities" type="src">
+        <files mask="fsl_debug_console.c"/>
+      </source>
+      <source path="devices/MKL27Z644/utilities" type="c_include">
+        <files mask="fsl_debug_console.h"/>
+      </source>
+    </component>
+    <component name="misc_utilities" type="utilities" device="MKL27Z644" version="1.0.0">
+      <source path="devices/MKL27Z644/utilities" type="src">
+        <files mask="fsl_sbrk.c"/>
+      </source>
+    </component>
+    <component name="notifier" type="utilities" device="MKL27Z644" version="1.0.0">
+      <source path="devices/MKL27Z644/utilities" type="src">
+        <files mask="fsl_notifier.c"/>
+      </source>
+      <source path="devices/MKL27Z644/utilities" type="c_include">
+        <files mask="fsl_notifier.h"/>
+      </source>
+    </component>
+    <component name="device" type="other" version="1.0.0">
+      <source path="middleware/usb_1.0.0/device" type="c_include">
+        <files mask="usb_device.h"/>
+        <files mask="usb_device_dci.h"/>
+      </source>
+      <source path="middleware/usb_1.0.0/device" type="src">
+        <files mask="usb_device_dci.c"/>
+      </source>
+    </component>
+    <component name="device_khci" type="other" version="1.0.0">
+      <source path="middleware/usb_1.0.0/device" type="src">
+        <files mask="usb_device_khci.c"/>
+      </source>
+      <source path="middleware/usb_1.0.0/device" type="c_include">
+        <files mask="usb_device_khci.h"/>
+      </source>
+    </component>
+    <component name="host" type="other" version="1.0.0">
+      <source path="middleware/usb_1.0.0/host" type="c_include">
+        <files mask="usb_host.h"/>
+        <files mask="usb_host_devices.h"/>
+        <files mask="usb_host_framework.h"/>
+        <files mask="usb_host_hci.h"/>
+      </source>
+      <source path="middleware/usb_1.0.0/host" type="src">
+        <files mask="usb_host_devices.c"/>
+        <files mask="usb_host_framework.c"/>
+        <files mask="usb_host_hci.c"/>
+      </source>
+    </component>
+    <component name="audio" type="other" version="1.0.0">
+      <source path="middleware/usb_1.0.0/host/class" type="src">
+        <files mask="usb_host_audio.c"/>
+      </source>
+      <source path="middleware/usb_1.0.0/host/class" type="c_include">
+        <files mask="usb_host_audio.h"/>
+      </source>
+    </component>
+    <component name="cdc" type="other" version="1.0.0">
+      <source path="middleware/usb_1.0.0/host/class" type="src">
+        <files mask="usb_host_cdc.c"/>
+      </source>
+      <source path="middleware/usb_1.0.0/host/class" type="c_include">
+        <files mask="usb_host_cdc.h"/>
+      </source>
+    </component>
+    <component name="host_khci" type="other" version="1.0.0">
+      <source path="middleware/usb_1.0.0/host" type="src">
+        <files mask="usb_host_khci.c"/>
+      </source>
+      <source path="middleware/usb_1.0.0/host" type="c_include">
+        <files mask="usb_host_khci.h"/>
+      </source>
+    </component>
+    <component name="hid" type="other" version="1.0.0">
+      <source path="middleware/usb_1.0.0/host/class" type="src">
+        <files mask="usb_host_hid.c"/>
+      </source>
+      <source path="middleware/usb_1.0.0/host/class" type="c_include">
+        <files mask="usb_host_hid.h"/>
+      </source>
+    </component>
+    <component name="hub" type="other" version="1.0.0">
+      <source path="middleware/usb_1.0.0/host/class" type="src">
+        <files mask="usb_host_hub.c"/>
+        <files mask="usb_host_hub_app.c"/>
+      </source>
+      <source path="middleware/usb_1.0.0/host/class" type="c_include">
+        <files mask="usb_host_hub.h"/>
+        <files mask="usb_host_hub_app.h"/>
+      </source>
+    </component>
+    <component name="msd" type="other" version="1.0.0">
+      <source path="middleware/usb_1.0.0/host/class" type="src">
+        <files mask="usb_host_msd.c"/>
+        <files mask="usb_host_msd_ufi.c"/>
+      </source>
+      <source path="middleware/usb_1.0.0/host/class" type="c_include">
+        <files mask="usb_host_msd.h"/>
+      </source>
+    </component>
+    <component name="phdc" type="other" version="1.0.0">
+      <source path="middleware/usb_1.0.0/host/class" type="src">
+        <files mask="usb_host_phdc.c"/>
+      </source>
+      <source path="middleware/usb_1.0.0/host/class" type="c_include">
+        <files mask="usb_host_phdc.h"/>
+      </source>
+    </component>
+    <component name="include_common" type="other" version="1.0.0">
+      <source path="middleware/usb_1.0.0/include" type="c_include">
+        <files mask="usb.h"/>
+        <files mask="usb_misc.h"/>
+        <files mask="usb_spec.h"/>
+      </source>
+    </component>
+    <component name="include_ehci" type="other" version="1.0.0">
+      <source path="middleware/usb_1.0.0/include" type="c_include">
+        <files mask="usb.h"/>
+        <files mask="usb_ehci.h"/>
+        <files mask="usb_misc.h"/>
+      </source>
+    </component>
+    <component name="include_khci" type="other" version="1.0.0">
+      <source path="middleware/usb_1.0.0/include" type="c_include">
+        <files mask="usb.h"/>
+        <files mask="usb_khci.h"/>
+        <files mask="usb_misc.h"/>
+      </source>
+    </component>
+    <component name="bm" type="other" version="1.0.0">
+      <source path="middleware/usb_1.0.0/osa" type="c_include">
+        <files mask="usb_osa.h"/>
+        <files mask="usb_osa_bm.h"/>
+      </source>
+      <source path="middleware/usb_1.0.0/osa" type="src">
+        <files mask="usb_osa_bm.c"/>
+      </source>
+    </component>
+    <component name="freertos" type="other" version="1.0.0">
+      <source path="middleware/usb_1.0.0/osa" type="c_include">
+        <files mask="usb_osa.h"/>
+        <files mask="usb_osa_freertos.h"/>
+      </source>
+      <source path="middleware/usb_1.0.0/osa" type="src">
+        <files mask="usb_osa_freertos.c"/>
+      </source>
+    </component>
+    <component name="ucosii" type="other" version="1.0.0">
+      <source path="middleware/usb_1.0.0/osa" type="c_include">
+        <files mask="usb_osa.h"/>
+        <files mask="usb_osa_ucosii.h"/>
+      </source>
+      <source path="middleware/usb_1.0.0/osa" type="src">
+        <files mask="usb_osa_ucosii.c"/>
+      </source>
+    </component>
+    <component name="ucosiii" type="other" version="1.0.0">
+      <source path="middleware/usb_1.0.0/osa" type="c_include">
+        <files mask="usb_osa.h"/>
+        <files mask="usb_osa_ucosiii.h"/>
+      </source>
+      <source path="middleware/usb_1.0.0/osa" type="src">
+        <files mask="usb_osa_ucosiii.c"/>
+      </source>
+    </component>
+    <component name="CMSIS" type="other" version="4.5.0">
+      <source path="CMSIS/DSP_Lib/Examples/arm_class_marks_example/ARM" type="src">
+        <files mask="arm_class_marks_example_f32.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_class_marks_example/ARM/RTE" type="c_include">
+        <files mask="RTE_Components.h"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_class_marks_example/ARM/RTE/Device/ARMCM0" type="src">
+        <files mask="system_ARMCM0.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_class_marks_example/ARM/RTE/Device/ARMCM0" type="asm_include">
+        <files mask="startup_ARMCM0.s"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_class_marks_example/ARM/RTE/Device/ARMCM3" type="src">
+        <files mask="system_ARMCM3.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_class_marks_example/ARM/RTE/Device/ARMCM3" type="asm_include">
+        <files mask="startup_ARMCM3.s"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_class_marks_example/ARM/RTE/Device/ARMCM4_FP" type="src">
+        <files mask="system_ARMCM4.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_class_marks_example/ARM/RTE/Device/ARMCM4_FP" type="asm_include">
+        <files mask="startup_ARMCM4.s"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_class_marks_example/ARM/RTE/Device/ARMCM7_SP" type="src">
+        <files mask="system_ARMCM7.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_class_marks_example/ARM/RTE/Device/ARMCM7_SP" type="asm_include">
+        <files mask="startup_ARMCM7.s"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_class_marks_example/GCC" type="src">
+        <files mask="arm_class_marks_example_f32.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_class_marks_example/GCC/Startup" type="src">
+        <files mask="system_ARMCM0.c"/>
+        <files mask="system_ARMCM4.c"/>
+        <files mask="system_ARMCM3.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_class_marks_example/GCC/Startup" type="asm_include">
+        <files mask="startup_ARMCM4.S"/>
+        <files mask="startup_ARMCM0.S"/>
+        <files mask="startup_ARMCM3.S"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_class_marks_example/GCC/Startup" type="linker">
+        <files mask="ARMCMx.ld"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_convolution_example/ARM" type="src">
+        <files mask="math_helper.c"/>
+        <files mask="arm_convolution_example_f32.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_convolution_example/ARM" type="c_include">
+        <files mask="math_helper.h"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_convolution_example/ARM/RTE" type="c_include">
+        <files mask="RTE_Components.h"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_convolution_example/ARM/RTE/Device/ARMCM0" type="src">
+        <files mask="system_ARMCM0.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_convolution_example/ARM/RTE/Device/ARMCM0" type="asm_include">
+        <files mask="startup_ARMCM0.s"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_convolution_example/ARM/RTE/Device/ARMCM3" type="src">
+        <files mask="system_ARMCM3.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_convolution_example/ARM/RTE/Device/ARMCM3" type="asm_include">
+        <files mask="startup_ARMCM3.s"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_convolution_example/ARM/RTE/Device/ARMCM4_FP" type="src">
+        <files mask="system_ARMCM4.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_convolution_example/ARM/RTE/Device/ARMCM4_FP" type="asm_include">
+        <files mask="startup_ARMCM4.s"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_convolution_example/ARM/RTE/Device/ARMCM7_SP" type="src">
+        <files mask="system_ARMCM7.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_convolution_example/ARM/RTE/Device/ARMCM7_SP" type="asm_include">
+        <files mask="startup_ARMCM7.s"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_convolution_example/GCC" type="src">
+        <files mask="math_helper.c"/>
+        <files mask="arm_convolution_example_f32.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_convolution_example/GCC" type="c_include">
+        <files mask="math_helper.h"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_convolution_example/GCC/Startup" type="src">
+        <files mask="system_ARMCM0.c"/>
+        <files mask="system_ARMCM4.c"/>
+        <files mask="system_ARMCM3.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_convolution_example/GCC/Startup" type="asm_include">
+        <files mask="startup_ARMCM4.S"/>
+        <files mask="startup_ARMCM0.S"/>
+        <files mask="startup_ARMCM3.S"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_convolution_example/GCC/Startup" type="linker">
+        <files mask="ARMCMx.ld"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_dotproduct_example/ARM" type="src">
+        <files mask="arm_dotproduct_example_f32.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_dotproduct_example/ARM/RTE" type="c_include">
+        <files mask="RTE_Components.h"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_dotproduct_example/ARM/RTE/Device/ARMCM0" type="src">
+        <files mask="system_ARMCM0.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_dotproduct_example/ARM/RTE/Device/ARMCM0" type="asm_include">
+        <files mask="startup_ARMCM0.s"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_dotproduct_example/ARM/RTE/Device/ARMCM3" type="src">
+        <files mask="system_ARMCM3.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_dotproduct_example/ARM/RTE/Device/ARMCM3" type="asm_include">
+        <files mask="startup_ARMCM3.s"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_dotproduct_example/ARM/RTE/Device/ARMCM4_FP" type="src">
+        <files mask="system_ARMCM4.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_dotproduct_example/ARM/RTE/Device/ARMCM4_FP" type="asm_include">
+        <files mask="startup_ARMCM4.s"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_dotproduct_example/ARM/RTE/Device/ARMCM7_SP" type="src">
+        <files mask="system_ARMCM7.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_dotproduct_example/ARM/RTE/Device/ARMCM7_SP" type="asm_include">
+        <files mask="startup_ARMCM7.s"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_dotproduct_example/GCC" type="src">
+        <files mask="arm_dotproduct_example_f32.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_dotproduct_example/GCC/Startup" type="src">
+        <files mask="system_ARMCM0.c"/>
+        <files mask="system_ARMCM4.c"/>
+        <files mask="system_ARMCM3.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_dotproduct_example/GCC/Startup" type="asm_include">
+        <files mask="startup_ARMCM4.S"/>
+        <files mask="startup_ARMCM0.S"/>
+        <files mask="startup_ARMCM3.S"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_dotproduct_example/GCC/Startup" type="linker">
+        <files mask="ARMCMx.ld"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_fft_bin_example/ARM" type="src">
+        <files mask="arm_fft_bin_data.c"/>
+        <files mask="arm_fft_bin_example_f32.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_fft_bin_example/ARM/RTE" type="c_include">
+        <files mask="RTE_Components.h"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_fft_bin_example/ARM/RTE/Device/ARMCM0" type="src">
+        <files mask="system_ARMCM0.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_fft_bin_example/ARM/RTE/Device/ARMCM0" type="asm_include">
+        <files mask="startup_ARMCM0.s"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_fft_bin_example/ARM/RTE/Device/ARMCM3" type="src">
+        <files mask="system_ARMCM3.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_fft_bin_example/ARM/RTE/Device/ARMCM3" type="asm_include">
+        <files mask="startup_ARMCM3.s"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_fft_bin_example/ARM/RTE/Device/ARMCM4_FP" type="src">
+        <files mask="system_ARMCM4.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_fft_bin_example/ARM/RTE/Device/ARMCM4_FP" type="asm_include">
+        <files mask="startup_ARMCM4.s"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_fft_bin_example/ARM/RTE/Device/ARMCM7_SP" type="src">
+        <files mask="system_ARMCM7.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_fft_bin_example/ARM/RTE/Device/ARMCM7_SP" type="asm_include">
+        <files mask="startup_ARMCM7.s"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_fft_bin_example/GCC" type="src">
+        <files mask="arm_fft_bin_data.c"/>
+        <files mask="arm_fft_bin_example_f32.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_fft_bin_example/GCC/Startup" type="src">
+        <files mask="system_ARMCM0.c"/>
+        <files mask="system_ARMCM4.c"/>
+        <files mask="system_ARMCM3.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_fft_bin_example/GCC/Startup" type="asm_include">
+        <files mask="startup_ARMCM4.S"/>
+        <files mask="startup_ARMCM0.S"/>
+        <files mask="startup_ARMCM3.S"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_fft_bin_example/GCC/Startup" type="linker">
+        <files mask="ARMCMx.ld"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_fir_example/ARM" type="src">
+        <files mask="arm_fir_example_f32.c"/>
+        <files mask="math_helper.c"/>
+        <files mask="arm_fir_data.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_fir_example/ARM" type="c_include">
+        <files mask="math_helper.h"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_fir_example/ARM/RTE" type="c_include">
+        <files mask="RTE_Components.h"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_fir_example/ARM/RTE/Device/ARMCM0" type="src">
+        <files mask="system_ARMCM0.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_fir_example/ARM/RTE/Device/ARMCM0" type="asm_include">
+        <files mask="startup_ARMCM0.s"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_fir_example/ARM/RTE/Device/ARMCM3" type="src">
+        <files mask="system_ARMCM3.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_fir_example/ARM/RTE/Device/ARMCM3" type="asm_include">
+        <files mask="startup_ARMCM3.s"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_fir_example/ARM/RTE/Device/ARMCM4_FP" type="src">
+        <files mask="system_ARMCM4.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_fir_example/ARM/RTE/Device/ARMCM4_FP" type="asm_include">
+        <files mask="startup_ARMCM4.s"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_fir_example/ARM/RTE/Device/ARMCM7_SP" type="src">
+        <files mask="system_ARMCM7.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_fir_example/ARM/RTE/Device/ARMCM7_SP" type="asm_include">
+        <files mask="startup_ARMCM7.s"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_graphic_equalizer_example/ARM" type="src">
+        <files mask="arm_graphic_equalizer_example_q31.c"/>
+        <files mask="arm_graphic_equalizer_data.c"/>
+        <files mask="math_helper.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_graphic_equalizer_example/ARM" type="c_include">
+        <files mask="math_helper.h"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_graphic_equalizer_example/ARM/RTE" type="c_include">
+        <files mask="RTE_Components.h"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_graphic_equalizer_example/ARM/RTE/Device/ARMCM0" type="src">
+        <files mask="system_ARMCM0.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_graphic_equalizer_example/ARM/RTE/Device/ARMCM0" type="asm_include">
+        <files mask="startup_ARMCM0.s"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_graphic_equalizer_example/ARM/RTE/Device/ARMCM3" type="src">
+        <files mask="system_ARMCM3.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_graphic_equalizer_example/ARM/RTE/Device/ARMCM3" type="asm_include">
+        <files mask="startup_ARMCM3.s"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_graphic_equalizer_example/ARM/RTE/Device/ARMCM4_FP" type="src">
+        <files mask="system_ARMCM4.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_graphic_equalizer_example/ARM/RTE/Device/ARMCM4_FP" type="asm_include">
+        <files mask="startup_ARMCM4.s"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_graphic_equalizer_example/ARM/RTE/Device/ARMCM7_SP" type="src">
+        <files mask="system_ARMCM7.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_graphic_equalizer_example/ARM/RTE/Device/ARMCM7_SP" type="asm_include">
+        <files mask="startup_ARMCM7.s"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_linear_interp_example/ARM" type="src">
+        <files mask="arm_linear_interp_example_f32.c"/>
+        <files mask="arm_linear_interp_data.c"/>
+        <files mask="math_helper.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_linear_interp_example/ARM" type="c_include">
+        <files mask="math_helper.h"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_linear_interp_example/ARM/RTE" type="c_include">
+        <files mask="RTE_Components.h"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_linear_interp_example/ARM/RTE/Device/ARMCM0" type="src">
+        <files mask="system_ARMCM0.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_linear_interp_example/ARM/RTE/Device/ARMCM0" type="asm_include">
+        <files mask="startup_ARMCM0.s"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_linear_interp_example/ARM/RTE/Device/ARMCM3" type="src">
+        <files mask="system_ARMCM3.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_linear_interp_example/ARM/RTE/Device/ARMCM3" type="asm_include">
+        <files mask="startup_ARMCM3.s"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_linear_interp_example/ARM/RTE/Device/ARMCM4_FP" type="src">
+        <files mask="system_ARMCM4.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_linear_interp_example/ARM/RTE/Device/ARMCM4_FP" type="asm_include">
+        <files mask="startup_ARMCM4.s"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_linear_interp_example/ARM/RTE/Device/ARMCM7_SP" type="src">
+        <files mask="system_ARMCM7.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_linear_interp_example/ARM/RTE/Device/ARMCM7_SP" type="asm_include">
+        <files mask="startup_ARMCM7.s"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_matrix_example/ARM" type="src">
+        <files mask="arm_matrix_example_f32.c"/>
+        <files mask="math_helper.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_matrix_example/ARM" type="c_include">
+        <files mask="math_helper.h"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_matrix_example/ARM/RTE" type="c_include">
+        <files mask="RTE_Components.h"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_matrix_example/ARM/RTE/Device/ARMCM0" type="src">
+        <files mask="system_ARMCM0.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_matrix_example/ARM/RTE/Device/ARMCM0" type="asm_include">
+        <files mask="startup_ARMCM0.s"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_matrix_example/ARM/RTE/Device/ARMCM3" type="src">
+        <files mask="system_ARMCM3.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_matrix_example/ARM/RTE/Device/ARMCM3" type="asm_include">
+        <files mask="startup_ARMCM3.s"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_matrix_example/ARM/RTE/Device/ARMCM4_FP" type="src">
+        <files mask="system_ARMCM4.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_matrix_example/ARM/RTE/Device/ARMCM4_FP" type="asm_include">
+        <files mask="startup_ARMCM4.s"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_matrix_example/ARM/RTE/Device/ARMCM7_SP" type="src">
+        <files mask="system_ARMCM7.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_matrix_example/ARM/RTE/Device/ARMCM7_SP" type="asm_include">
+        <files mask="startup_ARMCM7.s"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_signal_converge_example/ARM" type="src">
+        <files mask="arm_signal_converge_data.c"/>
+        <files mask="math_helper.c"/>
+        <files mask="arm_signal_converge_example_f32.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_signal_converge_example/ARM" type="c_include">
+        <files mask="math_helper.h"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_signal_converge_example/ARM/RTE" type="c_include">
+        <files mask="RTE_Components.h"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_signal_converge_example/ARM/RTE/Device/ARMCM0" type="src">
+        <files mask="system_ARMCM0.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_signal_converge_example/ARM/RTE/Device/ARMCM0" type="asm_include">
+        <files mask="startup_ARMCM0.s"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_signal_converge_example/ARM/RTE/Device/ARMCM3" type="src">
+        <files mask="system_ARMCM3.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_signal_converge_example/ARM/RTE/Device/ARMCM3" type="asm_include">
+        <files mask="startup_ARMCM3.s"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_signal_converge_example/ARM/RTE/Device/ARMCM4_FP" type="src">
+        <files mask="system_ARMCM4.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_signal_converge_example/ARM/RTE/Device/ARMCM4_FP" type="asm_include">
+        <files mask="startup_ARMCM4.s"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_signal_converge_example/ARM/RTE/Device/ARMCM7_SP" type="src">
+        <files mask="system_ARMCM7.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_signal_converge_example/ARM/RTE/Device/ARMCM7_SP" type="asm_include">
+        <files mask="startup_ARMCM7.s"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_sin_cos_example/ARM" type="src">
+        <files mask="arm_sin_cos_example_f32.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_sin_cos_example/ARM/RTE" type="c_include">
+        <files mask="RTE_Components.h"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_sin_cos_example/ARM/RTE/Device/ARMCM0" type="src">
+        <files mask="system_ARMCM0.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_sin_cos_example/ARM/RTE/Device/ARMCM0" type="asm_include">
+        <files mask="startup_ARMCM0.s"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_sin_cos_example/ARM/RTE/Device/ARMCM3" type="src">
+        <files mask="system_ARMCM3.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_sin_cos_example/ARM/RTE/Device/ARMCM3" type="asm_include">
+        <files mask="startup_ARMCM3.s"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_sin_cos_example/ARM/RTE/Device/ARMCM4_FP" type="src">
+        <files mask="system_ARMCM4.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_sin_cos_example/ARM/RTE/Device/ARMCM4_FP" type="asm_include">
+        <files mask="startup_ARMCM4.s"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_sin_cos_example/ARM/RTE/Device/ARMCM7_SP" type="src">
+        <files mask="system_ARMCM7.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_sin_cos_example/ARM/RTE/Device/ARMCM7_SP" type="asm_include">
+        <files mask="startup_ARMCM7.s"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_variance_example/ARM" type="src">
+        <files mask="arm_variance_example_f32.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_variance_example/ARM/RTE" type="c_include">
+        <files mask="RTE_Components.h"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_variance_example/ARM/RTE/Device/ARMCM0" type="src">
+        <files mask="system_ARMCM0.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_variance_example/ARM/RTE/Device/ARMCM0" type="asm_include">
+        <files mask="startup_ARMCM0.s"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_variance_example/ARM/RTE/Device/ARMCM3" type="src">
+        <files mask="system_ARMCM3.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_variance_example/ARM/RTE/Device/ARMCM3" type="asm_include">
+        <files mask="startup_ARMCM3.s"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_variance_example/ARM/RTE/Device/ARMCM4_FP" type="src">
+        <files mask="system_ARMCM4.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_variance_example/ARM/RTE/Device/ARMCM4_FP" type="asm_include">
+        <files mask="startup_ARMCM4.s"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_variance_example/ARM/RTE/Device/ARMCM7_SP" type="src">
+        <files mask="system_ARMCM7.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Examples/arm_variance_example/ARM/RTE/Device/ARMCM7_SP" type="asm_include">
+        <files mask="startup_ARMCM7.s"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Source/BasicMathFunctions" type="src">
+        <files mask="arm_dot_prod_q31.c"/>
+        <files mask="arm_mult_f32.c"/>
+        <files mask="arm_sub_f32.c"/>
+        <files mask="arm_offset_q15.c"/>
+        <files mask="arm_abs_f32.c"/>
+        <files mask="arm_negate_q31.c"/>
+        <files mask="arm_add_q7.c"/>
+        <files mask="arm_scale_f32.c"/>
+        <files mask="arm_shift_q31.c"/>
+        <files mask="arm_scale_q15.c"/>
+        <files mask="arm_offset_q7.c"/>
+        <files mask="arm_mult_q31.c"/>
+        <files mask="arm_negate_q15.c"/>
+        <files mask="arm_add_q15.c"/>
+        <files mask="arm_negate_f32.c"/>
+        <files mask="arm_sub_q31.c"/>
+        <files mask="arm_abs_q15.c"/>
+        <files mask="arm_mult_q15.c"/>
+        <files mask="arm_sub_q7.c"/>
+        <files mask="arm_offset_q31.c"/>
+        <files mask="arm_dot_prod_f32.c"/>
+        <files mask="arm_shift_q15.c"/>
+        <files mask="arm_offset_f32.c"/>
+        <files mask="arm_abs_q7.c"/>
+        <files mask="arm_negate_q7.c"/>
+        <files mask="arm_scale_q31.c"/>
+        <files mask="arm_dot_prod_q7.c"/>
+        <files mask="arm_shift_q7.c"/>
+        <files mask="arm_mult_q7.c"/>
+        <files mask="arm_sub_q15.c"/>
+        <files mask="arm_add_f32.c"/>
+        <files mask="arm_scale_q7.c"/>
+        <files mask="arm_abs_q31.c"/>
+        <files mask="arm_dot_prod_q15.c"/>
+        <files mask="arm_add_q31.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Source/CommonTables" type="src">
+        <files mask="arm_const_structs.c"/>
+        <files mask="arm_common_tables.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Source/ComplexMathFunctions" type="src">
+        <files mask="arm_cmplx_mult_cmplx_f32.c"/>
+        <files mask="arm_cmplx_mag_q15.c"/>
+        <files mask="arm_cmplx_conj_q31.c"/>
+        <files mask="arm_cmplx_mult_cmplx_q31.c"/>
+        <files mask="arm_cmplx_dot_prod_q15.c"/>
+        <files mask="arm_cmplx_conj_f32.c"/>
+        <files mask="arm_cmplx_mag_squared_f32.c"/>
+        <files mask="arm_cmplx_mag_squared_q31.c"/>
+        <files mask="arm_cmplx_mult_real_q31.c"/>
+        <files mask="arm_cmplx_mag_squared_q15.c"/>
+        <files mask="arm_cmplx_dot_prod_q31.c"/>
+        <files mask="arm_cmplx_mult_real_q15.c"/>
+        <files mask="arm_cmplx_mag_q31.c"/>
+        <files mask="arm_cmplx_dot_prod_f32.c"/>
+        <files mask="arm_cmplx_mult_real_f32.c"/>
+        <files mask="arm_cmplx_conj_q15.c"/>
+        <files mask="arm_cmplx_mult_cmplx_q15.c"/>
+        <files mask="arm_cmplx_mag_f32.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Source/ControllerFunctions" type="src">
+        <files mask="arm_pid_init_f32.c"/>
+        <files mask="arm_pid_reset_q31.c"/>
+        <files mask="arm_pid_reset_q15.c"/>
+        <files mask="arm_sin_cos_f32.c"/>
+        <files mask="arm_sin_cos_q31.c"/>
+        <files mask="arm_pid_reset_f32.c"/>
+        <files mask="arm_pid_init_q15.c"/>
+        <files mask="arm_pid_init_q31.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Source/FastMathFunctions" type="src">
+        <files mask="arm_sqrt_q15.c"/>
+        <files mask="arm_sqrt_q31.c"/>
+        <files mask="arm_sin_q15.c"/>
+        <files mask="arm_cos_f32.c"/>
+        <files mask="arm_sin_q31.c"/>
+        <files mask="arm_sin_f32.c"/>
+        <files mask="arm_cos_q31.c"/>
+        <files mask="arm_cos_q15.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Source/FilteringFunctions" type="src">
+        <files mask="arm_lms_q15.c"/>
+        <files mask="arm_lms_init_q15.c"/>
+        <files mask="arm_correlate_opt_q7.c"/>
+        <files mask="arm_biquad_cascade_df1_init_f32.c"/>
+        <files mask="arm_fir_decimate_q31.c"/>
+        <files mask="arm_conv_partial_fast_q31.c"/>
+        <files mask="arm_lms_norm_init_q15.c"/>
+        <files mask="arm_fir_lattice_init_f32.c"/>
+        <files mask="arm_biquad_cascade_df2T_init_f32.c"/>
+        <files mask="arm_biquad_cascade_stereo_df2T_init_f32.c"/>
+        <files mask="arm_fir_sparse_init_q31.c"/>
+        <files mask="arm_biquad_cascade_df1_fast_q31.c"/>
+        <files mask="arm_fir_decimate_q15.c"/>
+        <files mask="arm_conv_q31.c"/>
+        <files mask="arm_iir_lattice_q31.c"/>
+        <files mask="arm_conv_partial_opt_q7.c"/>
+        <files mask="arm_conv_partial_opt_q15.c"/>
+        <files mask="arm_biquad_cascade_df1_fast_q15.c"/>
+        <files mask="arm_lms_norm_init_q31.c"/>
+        <files mask="arm_fir_fast_q15.c"/>
+        <files mask="arm_fir_sparse_init_q15.c"/>
+        <files mask="arm_correlate_q7.c"/>
+        <files mask="arm_correlate_opt_q15.c"/>
+        <files mask="arm_fir_lattice_f32.c"/>
+        <files mask="arm_fir_interpolate_q31.c"/>
+        <files mask="arm_lms_norm_q15.c"/>
+        <files mask="arm_fir_sparse_q31.c"/>
+        <files mask="arm_biquad_cascade_df1_32x64_q31.c"/>
+        <files mask="arm_lms_norm_f32.c"/>
+        <files mask="arm_fir_decimate_fast_q15.c"/>
+        <files mask="arm_fir_q15.c"/>
+        <files mask="arm_fir_lattice_q15.c"/>
+        <files mask="arm_conv_partial_q7.c"/>
+        <files mask="arm_fir_interpolate_init_q15.c"/>
+        <files mask="arm_conv_partial_fast_q15.c"/>
+        <files mask="arm_biquad_cascade_df1_q15.c"/>
+        <files mask="arm_iir_lattice_init_q15.c"/>
+        <files mask="arm_correlate_q15.c"/>
+        <files mask="arm_fir_lattice_init_q31.c"/>
+        <files mask="arm_biquad_cascade_stereo_df2T_f32.c"/>
+        <files mask="arm_fir_interpolate_init_f32.c"/>
+        <files mask="arm_lms_init_f32.c"/>
+        <files mask="arm_fir_lattice_init_q15.c"/>
+        <files mask="arm_conv_partial_fast_opt_q15.c"/>
+        <files mask="arm_iir_lattice_q15.c"/>
+        <files mask="arm_lms_init_q31.c"/>
+        <files mask="arm_iir_lattice_init_f32.c"/>
+        <files mask="arm_fir_sparse_f32.c"/>
+        <files mask="arm_fir_init_f32.c"/>
+        <files mask="arm_biquad_cascade_df2T_f32.c"/>
+        <files mask="arm_fir_q31.c"/>
+        <files mask="arm_fir_fast_q31.c"/>
+        <files mask="arm_conv_partial_f32.c"/>
+        <files mask="arm_conv_f32.c"/>
+        <files mask="arm_biquad_cascade_df2T_f64.c"/>
+        <files mask="arm_fir_init_q31.c"/>
+        <files mask="arm_lms_norm_q31.c"/>
+        <files mask="arm_fir_decimate_init_f32.c"/>
+        <files mask="arm_conv_partial_q31.c"/>
+        <files mask="arm_fir_lattice_q31.c"/>
+        <files mask="arm_fir_interpolate_init_q31.c"/>
+        <files mask="arm_conv_partial_q15.c"/>
+        <files mask="arm_fir_interpolate_q15.c"/>
+        <files mask="arm_correlate_fast_q15.c"/>
+        <files mask="arm_biquad_cascade_df1_f32.c"/>
+        <files mask="arm_iir_lattice_f32.c"/>
+        <files mask="arm_fir_sparse_q15.c"/>
+        <files mask="arm_conv_q7.c"/>
+        <files mask="arm_fir_decimate_fast_q31.c"/>
+        <files mask="arm_conv_opt_q15.c"/>
+        <files mask="arm_lms_norm_init_f32.c"/>
+        <files mask="arm_fir_sparse_init_q7.c"/>
+        <files mask="arm_correlate_q31.c"/>
+        <files mask="arm_lms_f32.c"/>
+        <files mask="arm_correlate_fast_q31.c"/>
+        <files mask="arm_fir_init_q7.c"/>
+        <files mask="arm_biquad_cascade_df2T_init_f64.c"/>
+        <files mask="arm_correlate_f32.c"/>
+        <files mask="arm_fir_decimate_f32.c"/>
+        <files mask="arm_fir_init_q15.c"/>
+        <files mask="arm_fir_sparse_q7.c"/>
+        <files mask="arm_fir_f32.c"/>
+        <files mask="arm_correlate_fast_opt_q15.c"/>
+        <files mask="arm_biquad_cascade_df1_32x64_init_q31.c"/>
+        <files mask="arm_conv_fast_q31.c"/>
+        <files mask="arm_iir_lattice_init_q31.c"/>
+        <files mask="arm_biquad_cascade_df1_init_q31.c"/>
+        <files mask="arm_fir_q7.c"/>
+        <files mask="arm_lms_q31.c"/>
+        <files mask="arm_conv_q15.c"/>
+        <files mask="arm_conv_fast_q15.c"/>
+        <files mask="arm_conv_opt_q7.c"/>
+        <files mask="arm_fir_sparse_init_f32.c"/>
+        <files mask="arm_conv_fast_opt_q15.c"/>
+        <files mask="arm_fir_decimate_init_q31.c"/>
+        <files mask="arm_fir_interpolate_f32.c"/>
+        <files mask="arm_biquad_cascade_df1_q31.c"/>
+        <files mask="arm_biquad_cascade_df1_init_q15.c"/>
+        <files mask="arm_fir_decimate_init_q15.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Source/MatrixFunctions" type="src">
+        <files mask="arm_mat_init_f32.c"/>
+        <files mask="arm_mat_scale_f32.c"/>
+        <files mask="arm_mat_trans_q15.c"/>
+        <files mask="arm_mat_init_q15.c"/>
+        <files mask="arm_mat_trans_f32.c"/>
+        <files mask="arm_mat_inverse_f32.c"/>
+        <files mask="arm_mat_add_q15.c"/>
+        <files mask="arm_mat_inverse_f64.c"/>
+        <files mask="arm_mat_cmplx_mult_f32.c"/>
+        <files mask="arm_mat_init_q31.c"/>
+        <files mask="arm_mat_mult_fast_q15.c"/>
+        <files mask="arm_mat_add_q31.c"/>
+        <files mask="arm_mat_trans_q31.c"/>
+        <files mask="arm_mat_mult_q31.c"/>
+        <files mask="arm_mat_add_f32.c"/>
+        <files mask="arm_mat_mult_f32.c"/>
+        <files mask="arm_mat_sub_q15.c"/>
+        <files mask="arm_mat_scale_q15.c"/>
+        <files mask="arm_mat_mult_q15.c"/>
+        <files mask="arm_mat_sub_q31.c"/>
+        <files mask="arm_mat_scale_q31.c"/>
+        <files mask="arm_mat_sub_f32.c"/>
+        <files mask="arm_mat_cmplx_mult_q31.c"/>
+        <files mask="arm_mat_cmplx_mult_q15.c"/>
+        <files mask="arm_mat_mult_fast_q31.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Source/StatisticsFunctions" type="src">
+        <files mask="arm_min_f32.c"/>
+        <files mask="arm_var_f32.c"/>
+        <files mask="arm_mean_q7.c"/>
+        <files mask="arm_min_q7.c"/>
+        <files mask="arm_max_q7.c"/>
+        <files mask="arm_std_f32.c"/>
+        <files mask="arm_rms_f32.c"/>
+        <files mask="arm_power_f32.c"/>
+        <files mask="arm_mean_q15.c"/>
+        <files mask="arm_max_q31.c"/>
+        <files mask="arm_mean_q31.c"/>
+        <files mask="arm_max_f32.c"/>
+        <files mask="arm_mean_f32.c"/>
+        <files mask="arm_var_q15.c"/>
+        <files mask="arm_var_q31.c"/>
+        <files mask="arm_std_q15.c"/>
+        <files mask="arm_rms_q31.c"/>
+        <files mask="arm_rms_q15.c"/>
+        <files mask="arm_min_q15.c"/>
+        <files mask="arm_power_q7.c"/>
+        <files mask="arm_std_q31.c"/>
+        <files mask="arm_power_q31.c"/>
+        <files mask="arm_max_q15.c"/>
+        <files mask="arm_power_q15.c"/>
+        <files mask="arm_min_q31.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Source/SupportFunctions" type="src">
+        <files mask="arm_float_to_q31.c"/>
+        <files mask="arm_copy_q7.c"/>
+        <files mask="arm_q31_to_q15.c"/>
+        <files mask="arm_fill_q31.c"/>
+        <files mask="arm_fill_f32.c"/>
+        <files mask="arm_q15_to_q31.c"/>
+        <files mask="arm_q15_to_float.c"/>
+        <files mask="arm_q31_to_q7.c"/>
+        <files mask="arm_copy_q15.c"/>
+        <files mask="arm_q7_to_float.c"/>
+        <files mask="arm_q15_to_q7.c"/>
+        <files mask="arm_fill_q7.c"/>
+        <files mask="arm_q31_to_float.c"/>
+        <files mask="arm_float_to_q15.c"/>
+        <files mask="arm_float_to_q7.c"/>
+        <files mask="arm_copy_f32.c"/>
+        <files mask="arm_q7_to_q15.c"/>
+        <files mask="arm_q7_to_q31.c"/>
+        <files mask="arm_fill_q15.c"/>
+        <files mask="arm_copy_q31.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Source/TransformFunctions" type="src">
+        <files mask="arm_dct4_init_q15.c"/>
+        <files mask="arm_cfft_radix2_init_q31.c"/>
+        <files mask="arm_cfft_q15.c"/>
+        <files mask="arm_dct4_q15.c"/>
+        <files mask="arm_cfft_radix2_q31.c"/>
+        <files mask="arm_cfft_f32.c"/>
+        <files mask="arm_rfft_q31.c"/>
+        <files mask="arm_cfft_radix2_q15.c"/>
+        <files mask="arm_cfft_radix2_f32.c"/>
+        <files mask="arm_bitreversal.c"/>
+        <files mask="arm_cfft_radix4_init_q31.c"/>
+        <files mask="arm_cfft_radix2_init_f32.c"/>
+        <files mask="arm_rfft_f32.c"/>
+        <files mask="arm_rfft_init_q31.c"/>
+        <files mask="arm_dct4_init_q31.c"/>
+        <files mask="arm_cfft_radix4_f32.c"/>
+        <files mask="arm_cfft_radix4_q31.c"/>
+        <files mask="arm_cfft_radix4_q15.c"/>
+        <files mask="arm_rfft_init_q15.c"/>
+        <files mask="arm_rfft_fast_init_f32.c"/>
+        <files mask="arm_rfft_q15.c"/>
+        <files mask="arm_cfft_radix4_init_f32.c"/>
+        <files mask="arm_cfft_radix8_f32.c"/>
+        <files mask="arm_cfft_radix4_init_q15.c"/>
+        <files mask="arm_dct4_f32.c"/>
+        <files mask="arm_dct4_init_f32.c"/>
+        <files mask="arm_rfft_fast_f32.c"/>
+        <files mask="arm_dct4_q31.c"/>
+        <files mask="arm_cfft_q31.c"/>
+        <files mask="arm_rfft_init_f32.c"/>
+        <files mask="arm_cfft_radix2_init_q15.c"/>
+      </source>
+      <source path="CMSIS/DSP_Lib/Source/TransformFunctions" type="asm_include">
+        <files mask="arm_bitreversal2.S"/>
+      </source>
+      <source path="CMSIS/Include" type="c_include">
+        <files mask="core_cmSimd.h"/>
+        <files mask="arm_common_tables.h"/>
+        <files mask="cmsis_armcc.h"/>
+        <files mask="arm_const_structs.h"/>
+        <files mask="core_cm7.h"/>
+        <files mask="cmsis_gcc.h"/>
+        <files mask="cmsis_armcc_V6.h"/>
+        <files mask="core_cm0plus.h"/>
+        <files mask="core_cm0.h"/>
+        <files mask="arm_math.h"/>
+        <files mask="core_sc000.h"/>
+        <files mask="core_sc300.h"/>
+        <files mask="core_cmFunc.h"/>
+        <files mask="core_cmInstr.h"/>
+        <files mask="core_cm3.h"/>
+        <files mask="core_cm4.h"/>
+      </source>
+    </component>
+    <component name="dma_manager" type="middleware" version="2.0.0">
+      <source path="middleware/dma_manager_2.0.0" type="src">
+        <files mask="fsl_dma_manager.c"/>
+      </source>
+      <source path="middleware/dma_manager_2.0.0" type="c_include">
+        <files mask="fsl_dma_manager.h"/>
+      </source>
+    </component>
+    <component name="fatfs" type="middleware" version="0.11">
+      <source path="middleware/fatfs_0.11a/doc/img" type="src">
+        <files mask="app3.c"/>
+        <files mask="app2.c"/>
+        <files mask="app4.c"/>
+        <files mask="app1.c"/>
+      </source>
+      <source path="middleware/fatfs_0.11a/src" type="src">
+        <files mask="diskio.c"/>
+        <files mask="ff.c"/>
+      </source>
+      <source path="middleware/fatfs_0.11a/src" type="c_include">
+        <files mask="ff.h"/>
+        <files mask="ffconf_template.h"/>
+        <files mask="diskio.h"/>
+        <files mask="integer.h"/>
+      </source>
+      <source path="middleware/fatfs_0.11a/src/fsl_mmc_disk" type="src">
+        <files mask="fsl_mmc_disk.c"/>
+      </source>
+      <source path="middleware/fatfs_0.11a/src/fsl_mmc_disk" type="c_include">
+        <files mask="fsl_mmc_disk.h"/>
+      </source>
+      <source path="middleware/fatfs_0.11a/src/fsl_option" type="src">
+        <files mask="ucosiii_syscall.c"/>
+        <files mask="ucosii_syscall.c"/>
+        <files mask="freertos_syscall.c"/>
+      </source>
+      <source path="middleware/fatfs_0.11a/src/fsl_sd_disk" type="src">
+        <files mask="fsl_sd_disk.c"/>
+      </source>
+      <source path="middleware/fatfs_0.11a/src/fsl_sd_disk" type="c_include">
+        <files mask="fsl_sd_disk.h"/>
+      </source>
+      <source path="middleware/fatfs_0.11a/src/fsl_sdspi_disk" type="src">
+        <files mask="fsl_sdspi_disk.c"/>
+      </source>
+      <source path="middleware/fatfs_0.11a/src/fsl_sdspi_disk" type="c_include">
+        <files mask="fsl_sdspi_disk.h"/>
+      </source>
+      <source path="middleware/fatfs_0.11a/src/fsl_ram_disk" type="src">
+        <files mask="fsl_ram_disk.c"/>
+      </source>
+      <source path="middleware/fatfs_0.11a/src/fsl_ram_disk" type="c_include">
+        <files mask="fsl_ram_disk.h"/>
+      </source>
+      <source path="middleware/fatfs_0.11a/src/fsl_usb_disk" type="src">
+        <files mask="fsl_usb_disk_bm.c"/>
+        <files mask="fsl_usb_disk_freertos.c"/>
+      </source>
+      <source path="middleware/fatfs_0.11a/src/fsl_usb_disk" type="c_include">
+        <files mask="fsl_usb_disk.h"/>
+      </source>
+      <source path="middleware/fatfs_0.11a/src/option" type="src">
+        <files mask="cc936.c"/>
+        <files mask="cc950.c"/>
+        <files mask="ccsbcs.c"/>
+        <files mask="unicode.c"/>
+        <files mask="cc932.c"/>
+        <files mask="syscall.c"/>
+        <files mask="cc949.c"/>
+      </source>
+    </component>
+    <component name="sdmmc" type="middleware" version="2.0.0">
+      <source path="middleware/sdmmc_2.0.0/inc" type="c_include">
+        <files mask="fsl_specification.h"/>
+        <files mask="fsl_sdspi.h"/>
+        <files mask="fsl_card.h"/>
+        <files mask="fsl_sdmmc.h"/>
+      </source>
+      <source path="middleware/sdmmc_2.0.0/src" type="src">
+        <files mask="fsl_mmc.c"/>
+        <files mask="fsl_sdmmc.c"/>
+        <files mask="fsl_sdspi.c"/>
+        <files mask="fsl_sd.c"/>
+      </source>
+    </component>
+    <component name="Include_common" type="CMSIS" version="4.5.0">
+      <source path="CMSIS/Include" type="c_include">
+        <files mask="arm_common_tables.h"/>
+        <files mask="arm_const_structs.h"/>
+        <files mask="arm_math.h"/>
+        <files mask="cmsis_armcc.h"/>
+        <files mask="cmsis_armcc_V6.h"/>
+        <files mask="cmsis_gcc.h"/>
+        <files mask="core_cmFunc.h"/>
+        <files mask="core_cmInstr.h"/>
+        <files mask="core_cmSimd.h"/>
+      </source>
+    </component>
+    <component name="Include_core_cm0" type="CMSIS" version="4.5.0">
+      <source path="CMSIS/Include" type="c_include">
+        <files mask="core_cm0.h"/>
+      </source>
+    </component>
+    <component name="Include_core_cm0plus" type="CMSIS" version="4.5.0">
+      <source path="CMSIS/Include" type="c_include">
+        <files mask="core_cm0plus.h"/>
+      </source>
+    </component>
+    <component name="Include_core_cm3" type="CMSIS" version="4.5.0">
+      <source path="CMSIS/Include" type="c_include">
+        <files mask="core_cm3.h"/>
+      </source>
+    </component>
+    <component name="Include_core_cm4" type="CMSIS" version="4.5.0">
+      <source path="CMSIS/Include" type="c_include">
+        <files mask="core_cm4.h"/>
+      </source>
+    </component>
+    <component name="Include_core_cm7" type="CMSIS" version="4.5.0">
+      <source path="CMSIS/Include" type="c_include">
+        <files mask="core_cm7.h"/>
+      </source>
+    </component>
+    <component name="Include_core_sc000" type="CMSIS" version="4.5.0">
+      <source path="CMSIS/Include" type="c_include">
+        <files mask="core_sc000.h"/>
+      </source>
+    </component>
+    <component name="Include_core_sc300" type="CMSIS" version="4.5.0">
+      <source path="CMSIS/Include" type="c_include">
+        <files mask="core_sc300.h"/>
+      </source>
+    </component>
+    <component name="MKL27Z644_CMSIS" type="CMSIS" device="MKL27Z644" version="1.0.0">
+      <source path="devices/MKL27Z644" type="c_include">
+        <files mask="fsl_device_registers.h"/>
+        <files mask="MKL27Z644.h"/>
+        <files mask="MKL27Z644_features.h"/>
+      </source>
+    </component>
+    <component name="MKL27Z644_linker" type="linker" device="MKL27Z644" version="1.0.0">
+      <source path="devices/MKL27Z644/iar" type="linker" compiler="iar">
+        <files mask="MKL27Z32xxx4_flash.icf"/>
+        <files mask="MKL27Z32xxx4_ram.icf"/>
+        <files mask="MKL27Z64xxx4_flash.icf"/>
+        <files mask="MKL27Z64xxx4_ram.icf"/>
+      </source>
+    </component>
+    <component name="MKL27Z644_startup" type="startup" device="MKL27Z644" version="1.0.0">
+      <source path="devices/MKL27Z644/iar" type="asm_include" compiler="iar">
+        <files mask="startup_MKL27Z644.s"/>
+      </source>
+      <source path="devices/MKL27Z644" type="src">
+        <files mask="system_MKL27Z644.c"/>
+      </source>
+      <source path="devices/MKL27Z644" type="c_include">
+        <files mask="system_MKL27Z644.h"/>
+      </source>
+    </component>
+    <component name="MKL27Z644_debugger" type="debugger" device="MKL27Z644" version="1.0.0">
+      <source path="devices/MKL27Z644" type="debug">
+        <files mask="MKL27Z644.svd"/>
+      </source>
+    </component>
+    <component name="Include" type="CMSIS">
+      <source path="CMSIS\Include" type="c_include">
+        <files mask="*$|core|*.h"/>
+        <files mask="*cmSimd.h"/>
+        <files mask="*cmFunc.h"/>
+        <files mask="*cmInstr.h"/>
+        <files mask="arm*.h"/>
+        <files mask="cmsis_gcc.h"/>
+      </source>
+      <source path="devices\$|device|" type="c_include">
+        <files mask="fsl_device_registers.h"/>
+        <files mask="$|device|.h"/>
+        <files mask="$|device|_features.h"/>
+      </source>
+    </component>
+    <component name="startup" type="startup">
+      <source path="devices\$|device|\$|compiler|" type="c_include">
+        <files mask="*.s"/>
+        <files mask="*.S"/>
+      </source>
+      <source path="devices\$|device|" type="c_include">
+        <files mask="system_$|device|.h"/>
+      </source>
+      <source path="devices\$|device|" type="src">
+        <files mask="system_$|device|.c"/>
+      </source>
+    </component>
+    <component name="linker" type="linker">
+      <source path="devices\$|device|\$|compiler|" type="linker" variant="flash">
+        <files mask="$|device_full_name|_flash.*"/>
+      </source>
+      <source path="devices\$|device|\$|compiler|" type="linker" variant="ram">
+        <files mask="$|device_full_name|_ram.*"/>
+      </source>
+    </component>
+  </components>
+</ksdk:manifest>

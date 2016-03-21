@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project>
+  <fileVersion>2</fileVersion>
+  <fileChecksum>1051580548</fileChecksum>
+  <configuration>
+    <name>Debug</name>
+    <outputs>
+      <file>$PROJ_DIR$\..\clock_config.h</file>
+      <file>$PROJ_DIR$\..\clock_config.c</file>
+      <file>$PROJ_DIR$\..\board.c</file>
+      <file>$PROJ_DIR$\..\board.h</file>
+      <file>$PROJ_DIR$\..\CMSIS USB Stack\inc\usbd_core.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
+      <file>$PROJ_DIR$\..\SPI_SDCard\fsl_sdmmc_card.h</file>
+      <file>$PROJ_DIR$\..\CMSIS USB Stack\inc\usb_cdc.h</file>
+      <file>$PROJ_DIR$\..\CMSIS USB Stack\inc\usbd_core_hid.h</file>
+      <file>$PROJ_DIR$\..\CMSIS USB Stack\inc\usb_hid.h</file>
+      <file>$PROJ_DIR$\..\CMSIS USB Stack\inc\usbd_event.h</file>
+      <file>$PROJ_DIR$\..\CMSIS USB Stack\inc\usb_msc.h</file>
+      <file>$PROJ_DIR$\..\CMSIS USB Stack\inc\usbd_core_cdc.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ystdio.h</file>
+      <file>$PROJ_DIR$\..\CMSIS USB Stack\inc\usbd_desc.h</file>
+      <file>$PROJ_DIR$\..\CMSIS USB Stack\inc\usbd_core_msc.h</file>
+      <file>$PROJ_DIR$\..\CMSIS USB Stack\inc\usbd_hid.h</file>
+      <file>$PROJ_DIR$\..\CMSIS USB Stack\inc\usbd_hw.h</file>
+      <file>$PROJ_DIR$\..\CMSIS USB Stack\inc\usb_def.h</file>
+      <file>$PROJ_DIR$\..\CMSIS USB Stack\inc\usbd_cdc_acm.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\math.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\xtgmath.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ymath.h</file>
+      <file>$PROJ_DIR$\..\CMSIS USB Stack\inc\usbd_lib_cdc.h</file>
+      <file>$PROJ_DIR$\..\CMSIS USB Stack\inc\usb_lib.h</file>
+      <file>$PROJ_DIR$\..\CMSIS USB Stack\inc\usb_for_lib.h</file>
+      <file>$PROJ_DIR$\..\CMSIS USB Stack\inc\usbd_lib_hid.h</file>
+      <file>$PROJ_DIR$\..\CMSIS USB Stack\inc\usbd_lib_msc.h</file>
+      <file>$PROJ_DIR$\debug\list\hello_world.map</file>
+      <file>$PROJ_DIR$\MKL27Z64xxx4_flash.icf</file>
+      <file>$TOOLKIT_DIR$\lib\rt6M_tl.a</file>
+      <file>$TOOLKIT_DIR$\lib\dl6M_tln.a</file>
+      <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+      <file>$TOOLKIT_DIR$\lib\m6M_tl.a</file>
+      <file>$PROJ_DIR$\debug\obj\system_MKL27Z644.pbi</file>
+      <file>$PROJ_DIR$\debug\obj\fsl_dma.o</file>
+      <file>$PROJ_DIR$\debug\obj\usbd_core.o</file>
+      <file>$PROJ_DIR$\debug\obj\usbd_core_hid.pbi</file>
+      <file>$PROJ_DIR$\debug\obj\fsl_dmamux.o</file>
+      <file>$PROJ_DIR$\debug\obj\fsl_spi.o</file>
+      <file>$PROJ_DIR$\debug\obj\fsl_uart.o</file>
+      <file>$PROJ_DIR$\debug\obj\fsl_dmamux.pbi</file>
+      <file>$PROJ_DIR$\debug\obj\board.pbi</file>
+      <file>$PROJ_DIR$\debug\obj\fsl_debug_console.pbi</file>
+      <file>$PROJ_DIR$\debug\obj\fsl_clock.pbi</file>
+      <file>$PROJ_DIR$\debug\obj\usbd_core.pbi</file>
+      <file>$PROJ_DIR$\debug\obj\usb_lib.pbi</file>
+      <file>$PROJ_DIR$\debug\obj\hello_world.pbd</file>
+      <file>$PROJ_DIR$\debug\obj\fsl_lpuart.o</file>
+      <file>$PROJ_DIR$\debug\obj\fsl_gpio.o</file>
+      <file>$PROJ_DIR$\debug\obj\clock_config.pbi</file>
+      <file>$PROJ_DIR$\debug\obj\fsl_smc.o</file>
+      <file>$PROJ_DIR$\debug\obj\pin_mux.pbi</file>
+      <file>$PROJ_DIR$\debug\hello_world.out</file>
+      <file>$PROJ_DIR$\debug\obj\startup_MKL27Z644.o</file>
+      <file>$PROJ_DIR$\debug\obj\fsl_uart.pbi</file>
+      <file>$PROJ_DIR$\debug\obj\usbd_msc.pbi</file>
+      <file>$PROJ_DIR$\debug\obj\fsl_gpio.pbi</file>
+      <file>$PROJ_DIR$\debug\obj\usbd_core_msc.o</file>
+      <file>$PROJ_DIR$\debug\obj\fsl_common.pbi</file>
+      <file>$PROJ_DIR$\debug\obj\usbd_msc.o</file>
+      <file>$PROJ_DIR$\debug\obj\fsl_smc.pbi</file>
+      <file>$PROJ_DIR$\debug\obj\system_MKL27Z644.o</file>
+      <file>$PROJ_DIR$\debug\obj\fsl_lpuart.pbi</file>
+      <file>$PROJ_DIR$\debug\obj\SPI_kinetis.o</file>
+      <file>$PROJ_DIR$\debug\obj\usbd_core_msc.pbi</file>
+      <file>$PROJ_DIR$\debug\obj\fsl_sdcard_spi.o</file>
+      <file>$PROJ_DIR$\debug\obj\fsl_sdcard_spi.pbi</file>
+      <file>$PROJ_DIR$\debug\obj\fsl_common.o</file>
+      <file>$PROJ_DIR$\debug\obj\fsl_debug_console.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdbool.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\devices\MKL27Z644\MKL27Z644_features.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\string.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\assert.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\devices\MKL27Z644\fsl_device_registers.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\CMSIS\Include\core_cm0plus.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\CMSIS\Include\core_cmFunc.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\devices\MKL27Z644\MKL27Z644.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\CMSIS\Include\core_cmInstr.h</file>
+      <file>$PROJ_DIR$\..\CMSIS USB Stack\inc\usbd_msc.h</file>
+      <file>$PROJ_DIR$\..\CMSIS USB Stack\inc\rl_usb.h</file>
+      <file>$PROJ_DIR$\..\CMSIS USB Stack\inc\usb.h</file>
+      <file>$PROJ_DIR$\..\pin_mux.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\devices\MKL27Z644\drivers\fsl_clock.c</file>
+      <file>$PROJ_DIR$\..\pin_mux.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\devices\MKL27Z644\drivers\fsl_clock.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\devices\MKL27Z644\drivers\fsl_common.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\devices\MKL27Z644\drivers\fsl_common.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\devices\MKL27Z644\drivers\fsl_dma.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\devices\MKL27Z644\drivers\fsl_dma.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\devices\MKL27Z644\drivers\fsl_dmamux.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\devices\MKL27Z644\drivers\fsl_dmamux.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\devices\MKL27Z644\drivers\fsl_gpio.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\devices\MKL27Z644\drivers\fsl_gpio.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\devices\MKL27Z644\drivers\fsl_lpuart.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\devices\MKL27Z644\drivers\fsl_lpuart.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\devices\MKL27Z644\drivers\fsl_port.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\devices\MKL27Z644\drivers\fsl_smc.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\devices\MKL27Z644\drivers\fsl_smc.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\devices\MKL27Z644\drivers\fsl_spi.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\devices\MKL27Z644\drivers\fsl_spi.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\devices\MKL27Z644\drivers\fsl_spi_dma.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\devices\MKL27Z644\drivers\fsl_spi_dma.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\devices\MKL27Z644\drivers\fsl_uart.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\devices\MKL27Z644\drivers\fsl_uart.h</file>
+      <file>$PROJ_DIR$\..\SPI_SDCard\fsl_sdcard_spi.c</file>
+      <file>$PROJ_DIR$\..\disk.c</file>
+      <file>$PROJ_DIR$\..\disk.h</file>
+      <file>$PROJ_DIR$\..\SPI_SDCard\fsl_sdcard_spi.h</file>
+      <file>$PROJ_DIR$\..\SPI_SDCard\SPI_kinetis.c</file>
+      <file>$PROJ_DIR$\..\SPI_SDCard\SPI_kinetis.h</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\devices\MKL27Z644\iar\startup_MKL27Z644.s</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\devices\MKL27Z644\system_MKL27Z644.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\devices\MKL27Z644\system_MKL27Z644.h</file>
+      <file>$PROJ_DIR$\..\CMSIS USB Stack\Porting use\usb_config.h</file>
+      <file>$PROJ_DIR$\..\CMSIS USB Stack\Porting use\usb_lib.c</file>
+      <file>$PROJ_DIR$\..\CMSIS USB Stack\src\usbd_core.c</file>
+      <file>$PROJ_DIR$\..\CMSIS USB Stack\src\usbd_core_hid.c</file>
+      <file>$PROJ_DIR$\..\CMSIS USB Stack\src\usbd_core_msc.c</file>
+      <file>$PROJ_DIR$\..\CMSIS USB Stack\src\usbd_hid.c</file>
+      <file>$PROJ_DIR$\..\CMSIS USB Stack\Porting use\usbd_KL27.c</file>
+      <file>$PROJ_DIR$\..\CMSIS USB Stack\src\usbd_msc.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\devices\MKL27Z644\utilities\fsl_debug_console.c</file>
+      <file>$PROJ_DIR$\..\..\..\..\..\devices\MKL27Z644\utilities\fsl_debug_console.h</file>
+      <file>$PROJ_DIR$\debug\obj\SPI_kinetis.pbi</file>
+      <file>$PROJ_DIR$\debug\obj\disk.o</file>
+      <file>$PROJ_DIR$\debug\obj\disk.pbi</file>
+      <file>$PROJ_DIR$\debug\obj\usbd_KL27.pbi</file>
+      <file>$PROJ_DIR$\debug\obj\clock_config.o</file>
+      <file>$PROJ_DIR$\debug\obj\fsl_spi_dma.pbi</file>
+      <file>$PROJ_DIR$\debug\obj\board.o</file>
+      <file>$PROJ_DIR$\debug\obj\pin_mux.o</file>
+      <file>$PROJ_DIR$\debug\obj\fsl_spi.pbi</file>
+      <file>$PROJ_DIR$\debug\obj\usbd_KL27.o</file>
+      <file>$PROJ_DIR$\debug\obj\fsl_clock.o</file>
+      <file>$PROJ_DIR$\debug\obj\usbd_hid.o</file>
+      <file>$PROJ_DIR$\debug\obj\usbd_core_hid.o</file>
+      <file>$PROJ_DIR$\debug\obj\usb_lib.o</file>
+      <file>$PROJ_DIR$\debug\obj\fsl_spi_dma.o</file>
+      <file>$PROJ_DIR$\debug\obj\usbd_hid.pbi</file>
+      <file>$PROJ_DIR$\debug\obj\fsl_dma.pbi</file>
+    </outputs>
+    <file>
+      <name>$PROJ_DIR$\..\clock_config.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 51</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 141</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 71 98 74 72 75 76 0 77 78 79 80 81 111 83 84 82 85 86 87 90 126 89 100 73 88 91</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 100 83 79 74 78 82 85 72 75 71 81 77 86 87 84 90 88 91 76 80 89 126 73 98 111 0</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\board.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 43</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 143</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 78 73 136 79 72 75 74 77 84 100 3 82 85 71 88 91 76 0 81 83 98 86 87 90 126 89 80 106</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 81 79 74 78 82 85 72 75 100 83 71 77 86 87 84 90 88 91 76 80 89 126 73 98 136 3 0 106</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 54 29</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\debug\hello_world.out</name>
+      <outputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 29</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 30 143 141 138 147 69 70 36 39 50 49 67 52 40 151 41 144 65 55 63 150 37 149 59 148 146 61 33 31 34 32</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\pin_mux.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 53</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 144</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 84 79 74 85 98 81 97 90 126 83 87 109 73 88 91 82 80 76 86 71 89 78 72 75 100 77</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 84 90 88 81 79 74 78 82 85 72 75 91 76 80 89 126 73 109 100 83 71 77 86 87 98 97</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\devices\MKL27Z644\drivers\fsl_clock.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 45</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 147</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 83 86 85 76 84 79 74 81 82 87 80 98 71 77 78 72 75 90 126 89 100 73 88 91</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 100 83 79 74 78 82 85 72 75 71 81 77 86 87 84 90 88 91 76 80 89 126 73 98</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\devices\MKL27Z644\drivers\fsl_common.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 60</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 69</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 91 79 82 81 87 71 83 84 85 74 86 90 88 76 100 136 77 98 78 72 75 73 126 89 80</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 100 83 79 74 78 82 85 72 75 71 81 77 86 87 84 90 88 91 76 80 89 126 73 98 136</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\devices\MKL27Z644\drivers\fsl_dma.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 153</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 36</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 78 79 77 76 74 100 71 98 72 75 80 81 83 84 82 85 86 87 90 126 89 102 73 88 91</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 102 100 83 79 74 78 82 85 72 75 71 81 77 86 87 84 90 88 91 76 80 89 126 73 98</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\devices\MKL27Z644\drivers\fsl_dmamux.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 42</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 39</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 84 79 74 76 83 85 86 81 82 87 80 100 71 77 98 78 72 75 90 126 89 104 73 88 91</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 104 100 83 79 74 78 82 85 72 75 71 81 77 86 87 84 90 88 91 76 80 89 126 73 98</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\devices\MKL27Z644\drivers\fsl_gpio.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 58</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 50</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 79 81 83 84 98 74 72 75 80 100 78 87 76 71 77 82 85 86 90 126 89 106 73 88 91</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 106 100 83 79 74 78 82 85 72 75 71 81 77 86 87 84 90 88 91 76 80 89 126 73 98</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\devices\MKL27Z644\drivers\fsl_lpuart.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 64</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 49</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 79 78 81 88 74 91 80 83 84 98 72 75 73 76 100 71 77 82 85 86 87 90 126 89 108</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 108 100 83 79 74 78 82 85 72 75 71 81 77 86 87 84 90 88 91 76 80 89 126 73 98</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\devices\MKL27Z644\drivers\fsl_smc.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 62</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 52</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 71 76 98 74 72 75 100 77 78 79 80 81 83 84 82 85 86 87 90 126 89 111 73 88 91</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 111 100 83 79 74 78 82 85 72 75 71 81 77 86 87 84 90 88 91 76 80 89 126 73 98</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\devices\MKL27Z644\drivers\fsl_spi.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 145</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 40</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 81 71 87 76 79 82 80 100 77 85 74 86 90 126 89 83 84 98 78 72 75 73 88 91 113</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 113 100 83 79 74 78 82 85 72 75 71 81 77 86 87 84 90 88 91 76 80 89 126 73 98</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\devices\MKL27Z644\drivers\fsl_spi_dma.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 142</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 151</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 82 79 80 102 81 71 87 76 100 77 85 74 86 90 126 89 83 113 84 98 78 72 75 73 88 91 115</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 115 113 100 83 79 74 78 82 85 72 75 71 81 77 86 87 84 90 88 91 76 80 89 126 73 98 102</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\devices\MKL27Z644\drivers\fsl_uart.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 56</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 41</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 79 81 74 77 126 85 86 90 89 100 71 82 87 80 76 83 84 98 78 72 75 73 88 91 117</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 117 100 83 79 74 78 82 85 72 75 71 81 77 86 87 84 90 88 91 76 80 89 126 73 98</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\SPI_SDCard\fsl_sdcard_spi.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 68</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 67</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 78 79 100 81 88 76 74 91 71 121 83 84 98 72 75 73 7 77 82 85 86 87 90 126 89 80 123</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 123 100 83 79 74 78 82 85 72 75 71 81 77 86 87 84 90 88 91 76 80 89 126 73 98 7 121</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\disk.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 139</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 138</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 76 92 126 93 81 136 90 89 78 74 84 100 4 0 97 5 79 72 75 71 94 19 15 14 3 113 6 121 73 88 91 82 85 80 77 10 9 20 86 7 120 106 83 98 87 8 12 13 16 11 17 18</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 120 84 90 88 81 79 74 78 82 85 72 75 91 76 80 89 126 73 0 3 106 100 83 71 77 86 87 98 136 113 97 93 94 19 8 10 12 4 13 9 16 15 11 20 17 92 18 6 14 5 121 7</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\SPI_SDCard\SPI_kinetis.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 137</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 65</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 79 81 100 78 82 80 83 84 98 74 72 87 76 113 71 77 85 86 90 126 89 123 75 73 88 91</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 123 100 83 79 74 78 82 85 72 75 71 81 77 86 87 84 90 88 91 76 80 89 126 73 98 113</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\devices\MKL27Z644\iar\startup_MKL27Z644.s</name>
+      <outputs>
+        <tool>
+          <name>AARM</name>
+          <file> 55</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\devices\MKL27Z644\system_MKL27Z644.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 35</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 63</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 81 88 74 79 82 85 73 89 84 78 72 75 90 126 80 76 91</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 81 79 74 78 82 85 72 75 84 90 88 91 76 80 89 126 73</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\CMSIS USB Stack\Porting use\usb_lib.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 47</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 150</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 94 78 9 10 20 127 79 72 75 74 19 4 15 92 81 82 85 8 12 13 16 11 17 18 93</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 93 81 79 74 78 82 85 72 75 94 19 8 10 12 4 13 9 16 15 11 20 17 92 18 127</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\CMSIS USB Stack\src\usbd_core.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 46</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 37</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 79 81 16 85 12 17 26 74 82 8 13 11 18 27 77 94 78 72 75 19 10 4 9 15 20 92 25 93 86 87 24 28</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 93 81 79 74 78 82 85 72 75 94 19 8 10 12 4 13 9 16 15 11 20 17 92 18 77 86 87 26 24 27 28 25</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\CMSIS USB Stack\src\usbd_core_hid.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 38</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 149</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 75 79 74 19 94 72 15 4 92 26 78 10 9 20 27 77 81 82 85 8 12 13 16 11 17 18 25 93 86 87 24 28</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 93 81 79 74 78 82 85 72 75 94 19 8 10 12 4 13 9 16 15 11 20 17 92 18 77 86 87 26 24 27 28 25</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\CMSIS USB Stack\src\usbd_core_msc.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 66</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 59</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 92 4 94 79 72 75 74 19 15 26 78 10 9 20 27 77 81 82 85 8 12 13 16 11 17 18 25 93 86 87 24 28</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 93 81 79 74 78 82 85 72 75 94 19 8 10 12 4 13 9 16 15 11 20 17 92 18 77 86 87 26 24 27 28 25</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\CMSIS USB Stack\src\usbd_hid.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 152</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 148</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 18 13 87 74 79 82 8 11 26 81 85 12 16 17 24 77 94 78 72 75 19 10 4 9 15 20 92 86 28 93 27 25</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 93 81 79 74 78 82 85 72 75 94 19 8 10 12 4 13 9 16 15 11 20 17 92 18 77 86 87 26 24 27 28 25</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\CMSIS USB Stack\Porting use\usbd_KL27.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 140</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 146</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 11 79 80 84 74 82 8 98 127 13 18 83 87 81 94 85 12 16 17 86 90 126 89 100 78 72 75 19 10 4 9 15 20 92 71 77 73 88 91 76 93</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 93 81 79 74 78 82 85 72 75 94 19 8 10 12 4 13 9 16 15 11 20 17 92 18 100 83 71 77 86 87 84 90 88 91 76 80 89 126 73 98 127</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\CMSIS USB Stack\src\usbd_msc.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 57</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 61</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 74 11 87 79 82 8 26 81 13 18 24 77 94 85 12 16 17 86 28 93 78 72 75 19 10 4 9 15 20 92 27 25</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 93 81 79 74 78 82 85 72 75 94 19 8 10 12 4 13 9 16 15 11 20 17 92 18 77 86 87 26 24 27 28 25</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\..\..\..\devices\MKL27Z644\utilities\fsl_debug_console.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 44</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 70</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 74 75 89 22 72 77 79 83 21 117 78 71 90 126 81 5 136 108 86 82 85 23 100 84 98 87 73 88 80 76 91</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 5 79 74 78 82 85 72 75 86 21 23 22 136 100 83 71 81 77 87 84 90 88 91 76 80 89 126 73 98 117 108</file>
+        </tool>
+      </inputs>
+    </file>
+  </configuration>
+  <configuration>
+    <name>Release</name>
+    <outputs/>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>ILINK</tool>
+    </forcedrebuild>
+  </configuration>
+</project>
+
+
